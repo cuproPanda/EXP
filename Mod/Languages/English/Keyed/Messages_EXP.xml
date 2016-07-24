@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Daylight Sensor -->
+  
+  <EXP_Bright>Weather isn't blocking any sunlight.</EXP_Bright>
+  <EXP_Darkened>Weather is blocking some sunlight.</EXP_Darkened>
+  <EXP_Dark>Weather is blocking a lot of sunlight.</EXP_Dark>
+  
+  <EXP_SunlightLevel>Current sunlight level</EXP_SunlightLevel>
+  <EXP_Under30>Inactive under sunlight level 30</EXP_Under30>
+  <EXP_Above30>Inactive above sunlight level 30</EXP_Above30>
+
+</LanguageData>

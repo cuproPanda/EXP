@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+
+	<RecipeDef>
+		<defName>EXP_InsulateCable</defName>
+		<label>make insulated cable</label>
+		<description>Shape copper into a cable and insulate it using rubber.</description>
+		<jobString>Insulating.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<workAmount>500</workAmount>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CP_Copper</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CP_Rubber</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<EXP_InsulatedCable>5</EXP_InsulatedCable>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CP_Copper</li>
+				<li>CP_Rubber</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>CP_Copper</li>
+				<li>CP_Rubber</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		</recipeUsers>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>EXP_InsulatedCable</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>EXP_RefineRubber</defName>
+		<label>refine latex</label>
+		<description>Bake latex into usable sheets.</description>
+		<jobString>Refining latex.</jobString>
+		<workAmount>1500</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EXP_LatexBucket</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<CP_Rubber>5</CP_Rubber>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>EXP_LatexBucket</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>EXP_LatexBucket</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>CP_Furnace</li>
+		</recipeUsers>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>EXP_MakeComponentBulk</defName>
+		<label>make 5 components</label>
+		<description>Making components.</description>
+		<jobString>Making components.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>12000</workAmount>
+		<unfinishedThingDef>EXP_UnfinishedComponentBundle</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CP_Copper</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CP_Rubber</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CP_Copper</li>
+				<li>CP_Rubber</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Component>5</Component>
+		</products>
+		<recipeUsers>
+			<li>ComponentAssemblyBench</li>
+		</recipeUsers>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+</RecipeDefs>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!--================================ Tier 2: Basic electricity ====================================-->
+
+	<ResearchProjectDef>
+		<defName>EXP_InsulatedBattery</defName>
+		<label>insulated batteries</label>
+		<description>Allows you to build insulated batteries, for those times you absolutely must place a battery outside or in the heat.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Batteries</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EXP_InsulatedCable</defName>
+		<label>insulated cables</label>
+		<description>Allows colonists to smith insulated cables, which can be buried under the ground or used in more advanced recipes.</description>
+		<baseCost>100</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+			<li>Smithing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<!--=============================== Tier 3: Hi-tech research bench ===================================-->
+
+	<ResearchProjectDef>
+		<defName>EXP_EnhancedBattery</defName>
+		<label>enhanced batteries</label>
+		<description>Allows colonists to build enhanced batteries, which are more efficient and store more energy.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Batteries</li>
+			<li>Smithing</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EXP_EnhancedSolar</defName>
+		<label>enhanced solar panels</label>
+		<description>Allows colonists to build enhanced solar panels to harness more power from sunlight.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>SolarPanels</li>
+			<li>Smithing</li>
+			<li>ElectricSmelting</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+
+</Defs>

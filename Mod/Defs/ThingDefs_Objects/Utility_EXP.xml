@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+
+
+	<ThingDef Name="DaylightSensorBase" ParentName="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<allowWireConnection>false</allowWireConnection>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToMake>200</WorkToMake>
+			<Flammability>0.4</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<placingDraggableDimensions>0</placingDraggableDimensions>
+		<costList>
+			<Steel>12</Steel>
+			<CP_Copper>2</CP_Copper>
+			<CP_Rubber>1</CP_Rubber>
+			<Component>1</Component>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CorePanda.CompSunlight</compClass>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<tickerType>Rare</tickerType>
+		<designationCategory>Power</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+	</ThingDef>
+
+
+	<ThingDef Name="ConduitBase" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Transmitter</linkType>
+			<linkFlags>
+				<li>PowerConduit</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+		<building>
+			<isInert>true</isInert>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<EXP_InsulatedCable>1</EXP_InsulatedCable>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_Conduit</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_InsulatedCable</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+	<!-- ========================== Inheritors ============================== -->
+
+
+	<ThingDef ParentName="DaylightSensorBase">
+		<defName>EXP_DaylightSensor</defName>
+		<thingClass>ExpandedPower.Building_DaylightSensor</thingClass>
+		<label>daylight sensor</label>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/DS/DaylightSensor_On</texPath>
+		</graphicData>
+		<description>Connects power conduits only while exposed to sunlight.</description>
+	</ThingDef>
+
+	<ThingDef ParentName="DaylightSensorBase">
+		<defName>EXP_InvertedDaylightSensor</defName>
+		<thingClass>ExpandedPower.Building_InvertedDaylightSensor</thingClass>
+		<label>inverted daylight sensor</label>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/IDS/InDaylightSensor_On</texPath>
+		</graphicData>
+		<description>Disconnects power conduits only while exposed to sunlight.</description>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_Battery_Insulated</defName>
+		<label>insulated battery</label>
+		<thingClass>Building_Battery</thingClass>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/Battery/Battery</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>1400</WorkToMake>
+			<Flammability>0.2</Flammability>
+			<Beauty>-32</Beauty>
+		</statBases>
+		<description>Stores electricity when there is excess power and yields it when there is not. Has a waterproof casing and additional heatsinks.</description>
+		<size>(2,2)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<costList>
+			<Steel>40</Steel>
+			<CP_Copper>40</CP_Copper>
+			<CP_Rubber>15</CP_Rubber>
+			<Component>3</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Battery">
+				<storedEnergyMax>1200</storedEnergyMax>
+				<efficiency>0.5</efficiency>
+				<startElectricalFires>false</startElectricalFires>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_InsulatedBattery</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_Battery_Enhanced</defName>
+		<label>enhanced battery</label>
+		<thingClass>Building_Battery</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Power/Battery</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<color>(255,224,128)</color>
+			<drawSize>(2,3)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>800</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<description>Efficiently stores electricity when there is excess power and yields it when there is not. Has a waterproof casing and additional heatsinks.</description>
+		<size>(1,2)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<costList>
+			<Steel>20</Steel>
+			<CP_Copper>30</CP_Copper>
+			<Gold>15</Gold>
+			<CP_Rubber>10</CP_Rubber>
+			<Component>3</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Battery">
+				<storedEnergyMax>2000</storedEnergyMax>
+				<efficiency>0.8</efficiency>
+				<startElectricalFires>false</startElectricalFires>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_EnhancedBattery</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_EnhancedSolarGenerator</defName>
+		<label>enhanced solar generator</label>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/SolarCollector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(254,254,254)</color>
+			<damageData>
+				<rect>(0,0.6,4,2.8)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToMake>3000</WorkToMake>
+			<Flammability>0.8</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>Efficiently produces electricity from sunlight. Does not work in the dark.</description>
+		<size>(4,4)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<costList>
+			<Steel>75</Steel>
+			<CP_FusedQuartz>20</CP_FusedQuartz>
+			<EXP_InsulatedCable>40</EXP_InsulatedCable>
+			<Component>4</Component>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CorePanda.CompSunlight</compClass>
+			</li>
+			<li Class="CorePanda.CompProperties_VariableSolarPower">
+        <compClass>CorePanda.CompVariablePowerPlantSolar</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+				<FullSunPower>2500</FullSunPower>
+				<NightPower>0</NightPower>
+      </li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_EnhancedSolar</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="ConduitBase">
+		<defName>EXP_BuriedConduit</defName>
+		<label>buried conduit</label>
+		<description>A set of insulated electrical cables buried under the ground to help protect against fire and damage.</description>
+		<graphicData>
+			<color>(128,128,128,30)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToMake>55</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="ConduitBase">
+		<defName>EXP_ArmoredConduit</defName>
+		<label>armored conduit</label>
+		<description>A set of insulated electrical cables with a thick steel sheath. Designed to hold up even under extreme conditions.</description>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToMake>95</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+	</ThingDef>
+
+</Buildings>

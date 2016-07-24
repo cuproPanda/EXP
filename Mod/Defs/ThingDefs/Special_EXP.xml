@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_RubberTreeItemSpawner</defName>
+		<thingClass>ExpandedPower.RubberTreeItemSpawner</thingClass>
+		<label>rubber spawner</label>
+		<description>null</description>
+		<graphicData>
+			<texPath>Cupro/Null</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+</ThingDefs>
