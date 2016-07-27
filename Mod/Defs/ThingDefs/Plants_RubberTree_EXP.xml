@@ -107,6 +107,7 @@
 			<harvestedThingDef>EXP_RubberTreeItemSpawner</harvestedThingDef>
 			<harvestYield>1</harvestYield>
 			<wildCommonalityMaxFraction>0.5</wildCommonalityMaxFraction>
+			<blockAdjacentSow>false</blockAdjacentSow>
 			<wildBiomes>
 				<TropicalRainforest>0.10</TropicalRainforest>
 				<TemperateForest>0.08</TemperateForest>
