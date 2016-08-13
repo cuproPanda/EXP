@@ -18,7 +18,7 @@
 						<li>CP_Copper</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>10</count>
 			</li>
 			<li>
 				<filter>
@@ -30,7 +30,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<EXP_InsulatedCable>5</EXP_InsulatedCable>
+			<EXP_InsulatedCable>10</EXP_InsulatedCable>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
