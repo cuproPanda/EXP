@@ -52,7 +52,6 @@
 			<Plasteel>150</Plasteel>
 			<EXP_InsulatedCable>20</EXP_InsulatedCable>
 			<CP_Copper>30</CP_Copper>
-			<Component>2</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
@@ -172,10 +171,8 @@
     </building>
     <costList>
 			<Steel>600</Steel>
-			<CP_Copper>150</CP_Copper>
 			<EXP_InsulatedCable>50</EXP_InsulatedCable>
 			<CP_Quartz>25</CP_Quartz>
-			<Component>5</Component>
 			<AIPersonaCore>1</AIPersonaCore>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
