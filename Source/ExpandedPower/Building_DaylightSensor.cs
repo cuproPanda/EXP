@@ -2,14 +2,13 @@
 
 using UnityEngine;
 using CorePanda;
-using RimWorld;
 using Verse;
 
 namespace ExpandedPower {
   [StaticConstructorOnStartup]
   public class Building_DaylightSensor : Building {
 
-    public bool InSunlight;          // Current sunlight status
+    public bool InSunlighti;          // Current sunlight status
     private bool inSunlightOld;      // Backup status for loading
 
     // Comps
@@ -26,13 +25,13 @@ namespace ExpandedPower {
 
     // Allow power flow when exposed to sunlight
     public override bool TransmitsPowerNow {
-      get { return InSunlight; }
+      get { return InSunlighti; }
     }
 
     // Change graphic depending on current sunlight status
     public override Graphic Graphic {
       get {
-        if (InSunlight) {
+        if (InSunlighti) {
           return SensorOn;
         }
         return SensorOff;
@@ -43,14 +42,16 @@ namespace ExpandedPower {
     public override void ExposeData() {
       base.ExposeData(); 
       if (Scribe.mode == LoadSaveMode.PostLoadInit) { 
-        inSunlightOld = !InSunlight;
+        inSunlightOld = !InSunlighti;
         UpdatePowerGrid();
       }
     }
 
+
     // Handle initiation
-    public override void SpawnSetup() {
-      base.SpawnSetup();
+    public override void SpawnSetup(Map map, bool respawningAfterLoad) {
+      base.SpawnSetup(map, respawningAfterLoad);
+
       sunlightComp = GetComp<CompSunlight>();
       // Call TickRare() immediately when spawned to prevent latency issues
       TickRare(); 
@@ -61,8 +62,8 @@ namespace ExpandedPower {
       base.TickRare();
 
       // When under a roof, prevent sunlight from reaching the sensor
-      if (Find.RoofGrid.Roofed(base.Position)) {
-        InSunlight = false;
+      if (Map.roofGrid.Roofed(Position)) {
+        InSunlighti = false;
         return;
       }
       else {
@@ -74,12 +75,12 @@ namespace ExpandedPower {
     public void ReceiveDaylightSignal() {
       // If calculated sunlight level is above 30%, set to true. Otherwise, set to false.
       if (sunlightComp.FactoredSunlight > 0.3f) {
-        InSunlight = true;
+        InSunlighti = true;
         UpdatePowerGrid();
         return;
       }
       else {
-        InSunlight = false;
+        InSunlighti = false;
         UpdatePowerGrid();
       }
     }
@@ -107,22 +108,22 @@ namespace ExpandedPower {
       stringBuilder.AppendLine(" / 100");
 
       // If this is not receiving > 30% light, and is a daylight sensor
-      if (InSunlight == false && Inverted == false) {
+      if (InSunlighti == false && Inverted == false) {
         stringBuilder.Append("EXP_Under30".Translate());
       }
       // If this is receiving > 30% light, but is an inverted daylight sensor
-      if (InSunlight == true && Inverted == true) {
+      if (InSunlighti == true && Inverted == true) {
         stringBuilder.Append("EXP_Above30".Translate());
       }
 
-      return stringBuilder.ToString();
+      return stringBuilder.ToString().TrimEndNewlines();
     }
 
     // Notify the power net if a change has been made, then backup sunlight variable
     public void UpdatePowerGrid() {
-      if (InSunlight != inSunlightOld) {
-        PowerNetManager.Notfiy_TransmitterTransmitsPowerNowChanged(base.PowerComp);
-        inSunlightOld = InSunlight;
+      if (InSunlighti != inSunlightOld) {
+        Map.powerNetManager.Notfiy_TransmitterTransmitsPowerNowChanged(PowerComp);
+        inSunlightOld = InSunlighti;
       }
     }
   }
