@@ -15,13 +15,13 @@ namespace ExpandedPower {
 
     // Allow power flow when not exposed to sunlight
     public override bool TransmitsPowerNow {
-      get { return !InSunlighti; }
+      get { return !InSunlight; }
     }
 
     // Change graphic depending on current sunlight status
     public override Graphic Graphic {
       get {
-        if (!InSunlighti) {
+        if (!InSunlight) {
           return InSensorOn;
         }
         return InSensorOff;

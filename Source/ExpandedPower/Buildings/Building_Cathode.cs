@@ -21,7 +21,7 @@ namespace ExpandedPower {
       breakdownComp = GetComp<CompBreakdownable>();
       flickableComp = GetComp<CompFlickable>();
 
-      // Notify all connected diodes that this cathode has been removed
+      // Notify all connected diodes that this cathode has been created
       foreach (IntVec3 c in GenAdj.CellsAdjacentCardinal(Position, Rotation, def.Size)) {
         if (c.InBounds(Map)) {
           thingsInCell = c.GetThingList(Map);
