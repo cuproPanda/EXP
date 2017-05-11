@@ -2,34 +2,36 @@
 <Resources>
 
 	<!--================== Bases ==================-->
-  
-  <ThingDef Name="ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <label>unspecified resource</label>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-    <alwaysHaulable>true</alwaysHaulable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <rotatable>false</rotatable>
-    <pathCost>15</pathCost>
-  </ThingDef>
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<statBases>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
 
 	<ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
-    <equipmentType>Primary</equipmentType>
-    <techLevel>Neolithic</techLevel>
-    <comps>
-      <li>
-        <compClass>CompEquippable</compClass>
-      </li>
-    </comps>
-  </ThingDef>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
 
 
 	<!-- ========================== Inheritors ============================== -->
@@ -47,6 +49,7 @@
 		<soundDrop>Standard_Drop</soundDrop>
 		<statBases>
 			<MarketValue>8</MarketValue>
+			<Mass>0.25</Mass>
 		</statBases>
 		<thingCategories>
 			<li>Manufactured</li>
@@ -66,6 +69,7 @@
 		<soundDrop>Standard_Drop</soundDrop>
 		<statBases>
 			<MarketValue>5</MarketValue>
+			<Mass>2.4</Mass>
 		</statBases>
 		<thingCategories>
 			<li>ResourcesRaw</li>
@@ -87,6 +91,7 @@
 		<soundDrop>Wood_Drop</soundDrop>
 		<statBases>
 			<MarketValue>1.6</MarketValue>
+			<Mass>0.4</Mass>
 			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0.95</Flammability>
 			<DeteriorationRate>1.9</DeteriorationRate>
@@ -132,6 +137,226 @@
 				<meleeDamageDef>Blunt</meleeDamageDef>
 			</li>
 		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Copper</defName>
+		<label>copper</label>
+		<description>An important metal when dealing with temperature and electricity. Can also be used for building structures, tools, and weapons.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Copper</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>1.5</MarketValue>
+			<Mass>0.4</Mass>
+			<Beauty>1</Beauty>
+			<Cleanliness>3</Cleanliness>
+			<SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2.5</deepCommonality>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.90</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(100,80,20)</color>
+			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.8</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Cleanliness>1.25</Cleanliness>
+				<Flammability>0.2</Flammability>
+				<MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_QuartzSpawner</defName>
+		<thingClass>ExpandedPower.QuartzItemSpawner</thingClass>
+		<label>quartz</label>
+		<description>null</description>
+		<graphicData>
+			<texPath>Cupro/Null</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Quartz</defName>
+		<label>quartz</label>
+		<description>A common clear-white crystal.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Quartz</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Beauty>1</Beauty>
+			<Mass>0.25</Mass>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_FusedQuartz</defName>
+		<label>fused quartz</label>
+		<description>A sheet of quartz which has been melted and shaped.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/FusedQuartz</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>50</stackLimit>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<Mass>1</Mass>
+			<MarketValue>15</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_GalenaSpawner</defName>
+		<thingClass>ExpandedPower.GalenaItemSpawner</thingClass>
+		<label>galena</label>
+		<description>null</description>
+		<graphicData>
+			<texPath>Cupro/Null</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Lead</defName>
+		<label>lead</label>
+		<description>An extremely dense material with a wide array of industrial uses. Can also be used for building structures, tools, and weapons.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Lead</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>1.2</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>1.2</Mass>
+			<SharpDamageMultiplier>0.3</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.4</deepCommonality>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.6</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(97,95,103)</color>
+			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.75</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Cleanliness>0.75</Cleanliness>
+				<Flammability>0.1</Flammability>
+				<MeleeWeapon_Cooldown>1.15</MeleeWeapon_Cooldown>
+				<WorkToMake>0.8</WorkToMake>
+				<WorkToBuild>0.75</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_RawRubber</defName>
+		<label>raw rubber</label>
+		<description>A resinous tuber high in natural latex. Can be converted into rubber by baking it.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/JadeDesat</texPath>
+			<color>(185,185,140)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Mass>0.3</Mass>
+			<DeteriorationRate>1</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stackLimit>75</stackLimit>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>8</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Rubber</defName>
+		<label>rubber</label>
+		<description>A resilient, stretchy, waterproof material useful in electronics.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Rubber</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>0.25</Mass>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stackLimit>150</stackLimit>
 	</ThingDef>
 
 </Resources>

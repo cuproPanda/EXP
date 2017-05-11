@@ -2,43 +2,61 @@
 <TerrainDefs>
 
 
-  <TerrainDef Name="FloorBase" Abstract="True">
-    <layerable>true</layerable>
-    <affordances>
-      <li>Light</li>
-      <li>Heavy</li>
-      <li>SmoothHard</li>
-    </affordances>
-    <statBases>
-      <WorkToMake>135</WorkToMake>
-    </statBases>
-    <designationCategory>Floors</designationCategory>
-    <Fertility>0</Fertility>
-    <constructEffect>ConstructDirt</constructEffect>
-    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-  </TerrainDef>
-
-  
-
-  <!-- ================= Misc ================= -->
+	<TerrainDef Name="FloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>SmoothHard</li>
+		</affordances>
+		<statBases>
+			<WorkToBuild>135</WorkToBuild>
+		</statBases>
+		<designationCategory>Floors</designationCategory>
+		<Fertility>0</Fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</TerrainDef>
 
 
 
-  <TerrainDef  ParentName="FloorBase">
-    <DefName>EXP_RubberWoodFloor</DefName>
-    <label>rubberwood floor</label>
-    <RenderPrecedence>251</RenderPrecedence>
-    <Description>Rubberwood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Cupro/Terrain/RubberWoodFloor</texturePath>
-    <statBases>
+	<!-- ================= Misc ================= -->
+
+
+
+	<TerrainDef  ParentName="FloorBase">
+		<DefName>EXP_RubberWoodFloor</DefName>
+		<label>rubberwood floor</label>
+		<RenderPrecedence>251</RenderPrecedence>
+		<Description>Rubberwood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Cupro/Terrain/RubberWoodFloor</texturePath>
+		<statBases>
 			<Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <EXP_RubberWood>3</EXP_RubberWood>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-  </TerrainDef>
+			<WorkToBuild>85</WorkToBuild>
+		</statBases>
+		<CostList>
+			<EXP_RubberWood>3</EXP_RubberWood>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>EXP_CopperTile</DefName>
+		<label>sanitary copper tile</label>
+		<RenderPrecedence>244</RenderPrecedence>
+		<Description>Naturally antimicrobial copper tiles useful in hospitals to help prevent patients from getting various infections.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(100,80,20)</color>
+		<statBases>
+			<Cleanliness>0.3</Cleanliness>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<EdgeType>Hard</EdgeType>
+		<CostList>
+			<EXP_Copper>5</EXP_Copper>
+		</CostList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
 
 </TerrainDefs>

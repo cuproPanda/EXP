@@ -15,7 +15,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CP_Copper</li>
+						<li>EXP_Copper</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
@@ -23,7 +23,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CP_Rubber</li>
+						<li>EXP_Rubber</li>
 					</thingDefs>
 				</filter>
 				<count>5</count>
@@ -34,14 +34,14 @@
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>CP_Copper</li>
-				<li>CP_Rubber</li>
+				<li>EXP_Copper</li>
+				<li>EXP_Rubber</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
-				<li>CP_Copper</li>
-				<li>CP_Rubber</li>
+				<li>EXP_Copper</li>
+				<li>EXP_Rubber</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
@@ -53,9 +53,87 @@
 	</RecipeDef>
 
 	<RecipeDef>
+		<defName>EXP_FuseQuartz</defName>
+		<label>fuse quartz</label>
+		<description>Use intense heat to melt quartz into stable glass sheets. Makes 5 sheets.</description>
+		<jobString>Fusing quartz.</jobString>
+		<workAmount>1800</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EXP_Quartz</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<EXP_FusedQuartz>5</EXP_FusedQuartz>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>EXP_Quartz</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>ElectricSmelter</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef>
 		<defName>EXP_RefineRubber</defName>
+		<label>refine rubber</label>
+		<description>Extract and bake raw rubber into usable sheets. Makes 5 sheets of rubber.</description>
+		<jobString>Refining rubber.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EXP_RawRubber</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<EXP_Rubber>5</EXP_Rubber>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>EXP_RawRubber</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>EXP_RawRubber</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+			<li>ElectricSmelter</li>
+		</recipeUsers>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>EXP_RefineLatex</defName>
 		<label>refine latex</label>
-		<description>Bake latex into usable sheets.</description>
+		<description>Bake latex into usable rubber sheets. Makes 5 sheets of rubber.</description>
 		<jobString>Refining latex.</jobString>
 		<workAmount>1500</workAmount>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -72,7 +150,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<CP_Rubber>5</CP_Rubber>
+			<EXP_Rubber>5</EXP_Rubber>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -85,7 +163,9 @@
 			</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
-			<li>CP_Furnace</li>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+			<li>ElectricSmelter</li>
 		</recipeUsers>
 		<skillRequirements>
 			<li>
@@ -110,7 +190,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CP_Copper</li>
+						<li>EXP_Copper</li>
 					</thingDefs>
 				</filter>
 				<count>75</count>
@@ -118,10 +198,10 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CP_Rubber</li>
+						<li>EXP_Lead</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -134,8 +214,8 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>CP_Copper</li>
-				<li>CP_Rubber</li>
+				<li>EXP_Copper</li>
+				<li>EXP_Lead</li>
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
