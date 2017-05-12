@@ -5,7 +5,7 @@
 	<RecipeDef>
 		<defName>EXP_InsulateCable</defName>
 		<label>make insulated cable</label>
-		<description>Shape copper into a cable and insulate it using rubber.</description>
+		<description>Shape copper into a cable and insulate it using lead and rubber.</description>
 		<jobString>Insulating.</jobString>
 		<workSpeedStat>SmithingSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
@@ -23,10 +23,18 @@
 			<li>
 				<filter>
 					<thingDefs>
+						<li>EXP_Lead</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
 						<li>EXP_Rubber</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>4</count>
 			</li>
 		</ingredients>
 		<products>
@@ -35,12 +43,14 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>EXP_Copper</li>
+				<li>EXP_Lead</li>
 				<li>EXP_Rubber</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
 				<li>EXP_Copper</li>
+				<li>EXP_Lead</li>
 				<li>EXP_Rubber</li>
 			</thingDefs>
 		</defaultIngredientFilter>

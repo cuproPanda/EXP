@@ -68,8 +68,8 @@
 			<mineableYield>1</mineableYield>
 			<mineableScatterCommonality>0.75</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
-				<min>5</min>
-				<max>10</max>
+				<min>7</min>
+				<max>13</max>
 			</mineableScatterLumpSizeRange>
 		</building>
 	</ThingDef>
@@ -147,7 +147,7 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>EXP_GalenaSpawner</mineableThing>
 			<mineableYield>1</mineableYield>
-			<mineableScatterCommonality>0.35</mineableScatterCommonality>
+			<mineableScatterCommonality>0.65</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>6</min>
 				<max>17</max>

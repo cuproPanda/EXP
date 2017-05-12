@@ -187,22 +187,6 @@
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">
-		<defName>EXP_QuartzSpawner</defName>
-		<thingClass>ExpandedPower.QuartzItemSpawner</thingClass>
-		<label>quartz</label>
-		<description>null</description>
-		<graphicData>
-			<texPath>Cupro/Null</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<resourceReadoutPriority>First</resourceReadoutPriority>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>0</MarketValue>
-		</statBases>
-	</ThingDef>
-
-	<ThingDef ParentName="ResourceBase">
 		<defName>EXP_Quartz</defName>
 		<label>quartz</label>
 		<description>A common clear-white crystal.</description>
@@ -243,22 +227,6 @@
 		<thingCategories>
 			<li>Manufactured</li>
 		</thingCategories>
-	</ThingDef>
-
-	<ThingDef ParentName="ResourceBase">
-		<defName>EXP_GalenaSpawner</defName>
-		<thingClass>ExpandedPower.GalenaItemSpawner</thingClass>
-		<label>galena</label>
-		<description>null</description>
-		<graphicData>
-			<texPath>Cupro/Null</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<resourceReadoutPriority>First</resourceReadoutPriority>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>0</MarketValue>
-		</statBases>
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">

@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
-	<ThingDef ParentName="ResourceBase">
-		<defName>EXP_RubberTreeItemSpawner</defName>
-		<thingClass>ExpandedPower.RubberTreeItemSpawner</thingClass>
-		<label>rubber spawner</label>
+	<ThingDef Name="ItemSpawnerBase" ParentName="ResourceBase" Abstract="True">
 		<description>null</description>
 		<graphicData>
 			<texPath>Cupro/Null</texPath>
@@ -15,6 +12,32 @@
 		<statBases>
 			<MarketValue>0</MarketValue>
 		</statBases>
+	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="ItemSpawnerBase">
+		<defName>EXP_RubberTreeItemSpawner</defName>
+		<thingClass>ExpandedPower.RubberTreeItemSpawner</thingClass>
+		<label>rubber spawner</label>
+	</ThingDef>
+	
+	<ThingDef ParentName="ItemSpawnerBase">
+		<defName>EXP_QuartzSpawner</defName>
+		<thingClass>ExpandedPower.QuartzItemSpawner</thingClass>
+		<label>quartz spawner</label>
+	</ThingDef>
+	
+	<ThingDef ParentName="ItemSpawnerBase">
+		<defName>EXP_GalenaSpawner</defName>
+		<thingClass>ExpandedPower.GalenaItemSpawner</thingClass>
+		<label>galena spawner</label>
+	</ThingDef>
+	
+	<ThingDef ParentName="ItemSpawnerBase">
+		<defName>EXP_MachinerySpawner</defName>
+		<thingClass>ExpandedPower.MachineryItemSpawner</thingClass>
+		<label>machinery spawner</label>
 	</ThingDef>
 
 </ThingDefs>

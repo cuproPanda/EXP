@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MineableComponents</defName>
+		<label>compacted machinery</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/CompactedMachinery_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+		</statBases>
+		<description>Ancient machinery, compacted over time. Can be mined for useful components.</description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>EXP_MachinerySpawner</mineableThing>
+			<mineableYield>1</mineableYield>
+			<mineableScatterCommonality>1.00</mineableScatterCommonality>
+			<!-- as often as steel, with smaller blotches -->
+			<mineableScatterLumpSizeRange>
+				<min>3</min>
+				<max>6</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+</ThingDefs>

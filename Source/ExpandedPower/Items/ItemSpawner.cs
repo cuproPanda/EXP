@@ -10,5 +10,12 @@ namespace ExpandedPower {
       placedProduct.stackCount = stack;
       GenPlace.TryPlaceThing(placedProduct, Position, Map, ThingPlaceMode.Near);
     }
+
+
+    public void SpawnExactQuantity(ThingDef TDef, int NumToSpawn) {
+      Thing placedProduct = ThingMaker.MakeThing(TDef);
+      placedProduct.stackCount = NumToSpawn;
+      GenPlace.TryPlaceThing(placedProduct, Position, Map, ThingPlaceMode.Near);
+    }
   }
 }

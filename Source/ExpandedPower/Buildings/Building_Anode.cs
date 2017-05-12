@@ -43,7 +43,8 @@ namespace ExpandedPower {
         UpdateDiodeList();
       }
 
-      if (!diodes.NullOrEmpty()) {
+      // If there is a list of diodes and this anode has power
+      if (!diodes.NullOrEmpty() && powerComp.PowerOn) {
         // Do first pass to count connected cathodes
         // This is to divide the sent energy among cathodes
         for (int fd = 0; fd < diodes.Count; fd++) {
