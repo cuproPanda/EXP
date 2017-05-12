@@ -342,4 +342,142 @@
 		</costList>
 	</ThingDef>
 
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_Anode</defName>
+		<label>anode</label>
+		<description>Accepts power from conduits and sends it to nearby cathodes. Place adjacent to a diode which has at least 1 adjacent cathode. Any energy sent will be wasted if it isn't used or collected by a battery.</description>
+		<thingClass>ExpandedPower.Building_Anode</thingClass>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/Anode</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.1</fillPercent>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+		</building>
+		<costList>
+			<EXP_Copper>30</EXP_Copper>
+			<EXP_FusedQuartz>2</EXP_FusedQuartz>
+			<EXP_InsulatedCable>5</EXP_InsulatedCable>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>false</startElectricalFires>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>5</basePowerConsumption>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.10</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_Diodes</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_Diode</defName>
+		<label>diode</label>
+		<description>Bridges adjacent anodes and cathodes, allowing power to flow from the anodes to the cathodes. Place adjacent to anodes and cathodes. Up to 3 anodes or 3 cathodes may be used.</description>
+		<thingClass>ExpandedPower.Building_Diode</thingClass>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/Diode</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.1</fillPercent>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(1,1)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+		</building>
+		<costList>
+			<EXP_Copper>50</EXP_Copper>
+			<EXP_FusedQuartz>2</EXP_FusedQuartz>
+			<EXP_InsulatedCable>5</EXP_InsulatedCable>
+			<Component>2</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.10</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_Diodes</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>EXP_Cathode</defName>
+		<label>cathode</label>
+		<description>Receives power from nearby anodes. Place adjacent to a diode which has at least 1 adjacent anode. Any energy received will be wasted if it isn't used or collected by a battery.</description>
+		<thingClass>ExpandedPower.Building_Cathode</thingClass>
+		<graphicData>
+			<texPath>Cupro/Object/Utility/Cathode</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.1</fillPercent>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+		</building>
+		<costList>
+			<EXP_Copper>20</EXP_Copper>
+			<EXP_FusedQuartz>2</EXP_FusedQuartz>
+			<EXP_InsulatedCable>5</EXP_InsulatedCable>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<startElectricalFires>false</startElectricalFires>
+				<basePowerConsumption>0</basePowerConsumption>
+			</li>
+			<li>
+				<compClass>ExpandedPower.CompInternalBattery</compClass>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.10</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>EXP_Diodes</li>
+		</researchPrerequisites>
+	</ThingDef>
+
 </Buildings>

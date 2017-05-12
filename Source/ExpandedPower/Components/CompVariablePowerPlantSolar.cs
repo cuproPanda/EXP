@@ -103,7 +103,7 @@ namespace ExpandedPower {
       stringBuilder.Append(Mathf.Round(sunlightComp.FactoredSunlight * 100));
       stringBuilder.AppendLine(" / 100");
 
-      return stringBuilder.ToString();
+      return stringBuilder.ToString().TrimEndNewlines();
     }
   }
 }

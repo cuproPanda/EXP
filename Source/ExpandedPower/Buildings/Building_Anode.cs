@@ -8,12 +8,13 @@ namespace ExpandedPower {
 
   public class Building_Anode : Building {
 
+    public static readonly float MaxEnergyToSend = 500f;
+
     private TickManager tickMan;
     private CompPowerTrader powerComp;
     private List<Thing> thingsInCell;
     private List<Building_Diode> diodes;
     private int cathodesFound;
-    private float energyToSend = 100f;
     private float energyUsedThisTick;
 
 
@@ -23,6 +24,7 @@ namespace ExpandedPower {
       tickMan = Find.TickManager;
       powerComp = GetComp<CompPowerTrader>();
 
+      diodes = new List<Building_Diode>();
       UpdateDiodeList();
     }
 
@@ -30,10 +32,9 @@ namespace ExpandedPower {
     public override void Tick() {
       base.Tick();
 
-      // Turn the power off to stop drawing from the grid
-      // This will be turned on if any cathodes are found
-      powerComp.PowerOn = false;
-      powerComp.PowerOutput = 0;
+      // Reset power usage to standby power
+      // This will be increased if any cathodes are found
+      powerComp.PowerOutput = -5f;
       energyUsedThisTick = 0;
       cathodesFound = 0;
 
@@ -42,34 +43,35 @@ namespace ExpandedPower {
         UpdateDiodeList();
       }
 
-      // Do first pass to count connected cathodes
-      // This is to divide the sent energy among cathodes
-      for (int fd = 0; fd < diodes.Count; fd++) {
-        // Remove the diode from the list if it is no longer present
-        if (diodes[fd] == null) {
-          diodes.Remove(diodes[fd]);
-          continue;
-        }
+      if (!diodes.NullOrEmpty()) {
+        // Do first pass to count connected cathodes
+        // This is to divide the sent energy among cathodes
+        for (int fd = 0; fd < diodes.Count; fd++) {
+          // Remove the diode from the list if it is no longer present,
+          // or if it is broken down or turned off
+          if ((diodes[fd] == null) || (diodes[fd].breakdownComp != null && diodes[fd].IsBrokenDown()) || (diodes[fd].flickableComp != null && !diodes[fd].flickableComp.SwitchIsOn)) {
+            diodes.Remove(diodes[fd]);
+            continue;
+          }
 
-        for (int fc = 0; fc < diodes[fd].ConnectedCathodes.Count; fc++) {
-          if (diodes[fd].ConnectedCathodes[fc].CanSendEnergy()) {
+          for (int fc = 0; fc < diodes[fd].ConnectedCathodes.Count; fc++) {
             cathodesFound++;
           }
         }
-      }
 
-      // Do second pass to distribute power between cathodes
-      for (int d = 0; d < diodes.Count; d++) {
-        for (int c = 0; c < diodes[d].ConnectedCathodes.Count; c++) {
-          powerComp.PowerOn = true;
-          diodes[d].ConnectedCathodes[c].SendEnergy(Mathf.FloorToInt(energyToSend / cathodesFound));
-          energyUsedThisTick = energyToSend;
-        }
+        // Do second pass to distribute power between cathodes
+        for (int d = 0; d < diodes.Count; d++) {
+          for (int c = 0; c < diodes[d].ConnectedCathodes.Count; c++) {
+            // Try to send energy to the connected cathodes
+            if (diodes[d].ConnectedCathodes[c].TrySendEnergy(Mathf.FloorToInt(MaxEnergyToSend / cathodesFound))) {
+              energyUsedThisTick += Mathf.FloorToInt(MaxEnergyToSend / cathodesFound);
+            }
+          }
+        } 
       }
 
       // Draw power from the grid
-      // The anode draws 5 to run
-      powerComp.PowerOutput = -5f - energyUsedThisTick;
+      powerComp.PowerOutput -= energyUsedThisTick;
     }
 
 

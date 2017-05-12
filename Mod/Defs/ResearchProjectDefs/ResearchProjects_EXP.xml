@@ -26,6 +26,17 @@
 		</prerequisites>
 	</ResearchProjectDef>
 	
+	<ResearchProjectDef>
+		<defName>EXP_Diodes</defName>
+		<label>diodes</label>
+		<description>Allows colonists to build diodes, anodes, and cathodes for constructing one-way power distribution.</description>
+		<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EXP_InsulatedCable</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
 	<!--=============================== Tier 3: Hi-tech research bench ===================================-->
 
 	<ResearchProjectDef>
@@ -35,8 +46,8 @@
 		<baseCost>1200</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-			<li>Batteries</li>
-			<li>Smithing</li>
+			<li>EXP_InsulatedBattery</li>
+			<li>EXP_InsulatedCable</li>
 			<li>MicroelectronicsBasics</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
@@ -50,7 +61,7 @@
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>SolarPanels</li>
-			<li>Smithing</li>
+			<li>EXP_InsulatedCable</li>
 			<li>ElectricSmelting</li>
 			<li>MicroelectronicsBasics</li>
 		</prerequisites>

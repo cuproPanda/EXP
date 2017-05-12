@@ -320,8 +320,8 @@
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
 		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>2</MarketValue>
 			<Mass>0.3</Mass>
 			<DeteriorationRate>1</DeteriorationRate>
@@ -330,6 +330,7 @@
 			<li>ResourcesRaw</li>
 		</thingCategories>
 		<stackLimit>75</stackLimit>
+		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_Rottable">
 				<daysToRotStart>8</daysToRotStart>

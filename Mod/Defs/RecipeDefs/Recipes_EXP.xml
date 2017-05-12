@@ -193,15 +193,15 @@
 						<li>EXP_Copper</li>
 					</thingDefs>
 				</filter>
-				<count>75</count>
+				<count>50</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>EXP_Lead</li>
+						<li>EXP_Rubber</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>25</count>
 			</li>
 			<li>
 				<filter>
@@ -215,7 +215,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>EXP_Copper</li>
-				<li>EXP_Lead</li>
+				<li>EXP_Rubber</li>
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
