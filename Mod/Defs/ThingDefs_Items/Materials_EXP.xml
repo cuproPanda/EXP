@@ -193,6 +193,7 @@
 		<graphicData>
 			<texPath>Cupro/Item/Material/Quartz</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>45</onGroundRandomRotateAngle>
 		</graphicData>
 		<soundInteract>ChunkRock_Drop</soundInteract>
 		<soundDrop>ChunkRock_Drop</soundDrop>
