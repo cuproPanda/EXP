@@ -267,7 +267,7 @@
 		<description>An extremely dense material with a wide array of industrial uses. Can also be used for building structures, tools, and weapons.</description>
 		<graphicData>
 			<texPath>Cupro/Item/Material/Lead</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>

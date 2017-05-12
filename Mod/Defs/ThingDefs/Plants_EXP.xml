@@ -122,7 +122,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="PlantBase">
-		<defName>CP_PlantRubber</defName>
+		<defName>EXP_PlantRubber</defName>
 		<label>rubber plant</label>
 		<description>A highly resinous inedible tuber grown as a small source of natural rubber. Grows well even in somewhat poor soil. Harvests quickly.</description>
 		<statBases>
