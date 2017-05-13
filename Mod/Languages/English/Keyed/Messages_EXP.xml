@@ -2,13 +2,18 @@
 <LanguageData>
 
   <!-- Daylight Sensor -->
-  
   <EXP_Bright>Weather isn't blocking any sunlight.</EXP_Bright>
   <EXP_Darkened>Weather is blocking some sunlight.</EXP_Darkened>
   <EXP_Dark>Weather is blocking a lot of sunlight.</EXP_Dark>
-  
   <EXP_SunlightLevel>Current sunlight level</EXP_SunlightLevel>
   <EXP_Under30>Inactive under sunlight level 30</EXP_Under30>
   <EXP_Above30>Inactive above sunlight level 30</EXP_Above30>
+  
+  <!-- Anode -->
+  <EXP_PowerLower_L>-50 W</EXP_PowerLower_L>
+  <EXP_PowerLower_D>Lower power usage by 50 watts</EXP_PowerLower_D>
+  <EXP_PowerRaise_L>+50 W</EXP_PowerRaise_L>
+  <EXP_PowerRaise_D>Raise power usage by 50 watts</EXP_PowerRaise_D>
+  <EXP_PowerUsage>Set to send {0} W of power</EXP_PowerUsage>
 
 </LanguageData>

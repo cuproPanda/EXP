@@ -4,7 +4,7 @@ namespace ExpandedPower {
 
   internal class CompInternalBattery : ThingComp {
 
-    private float maxEnergy = Building_Anode.MaxEnergyToSend * 3;
+    private float maxEnergy = 1500f;
 
     private float powerContained;
     public float PowerContained {
