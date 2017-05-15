@@ -23,6 +23,12 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="ItemSpawnerBase">
+		<defName>EXP_CopperSpawner</defName>
+		<thingClass>ExpandedPower.CopperItemSpawner</thingClass>
+		<label>copper spawner</label>
+	</ThingDef>
+	
+	<ThingDef ParentName="ItemSpawnerBase">
 		<defName>EXP_QuartzSpawner</defName>
 		<thingClass>ExpandedPower.QuartzItemSpawner</thingClass>
 		<label>quartz spawner</label>

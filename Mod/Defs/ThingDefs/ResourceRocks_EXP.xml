@@ -118,7 +118,7 @@
 		</statBases>
 		<building>
 			<isResourceRock>true</isResourceRock>
-			<mineableThing>EXP_Copper</mineableThing>
+			<mineableThing>EXP_CopperSpawner</mineableThing>
 			<mineableYield>35</mineableYield>
 			<mineableScatterCommonality>0.65</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
