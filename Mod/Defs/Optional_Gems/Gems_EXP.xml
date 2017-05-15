@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Malachite</defName>
+		<label>malachite</label>
+		<description>A semi-precious copper carbonate mineral. Can be sold for a decent amount.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Malachite</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Beauty>1</Beauty>
+			<Mass>0.35</Mass>
+			<MarketValue>35</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Amethyst</defName>
+		<label>amethyst</label>
+		<description>A semi-precious quartz crystal. Can be sold for a decent amount.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Amethyst</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>0.25</Mass>
+			<MarketValue>42.5</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EXP_Cerussite</defName>
+		<label>cerussite</label>
+		<description>A semi-precious lead carbonate crystal. Can be sold for a decent amount.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/Cerussite</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>45</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Beauty>5</Beauty>
+			<Mass>0.25</Mass>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+</Resources>
+
+
+
+
+
+

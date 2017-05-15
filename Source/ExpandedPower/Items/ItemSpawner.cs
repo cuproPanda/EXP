@@ -2,7 +2,7 @@
 
 namespace ExpandedPower {
 
-  internal class ItemSpawner : ThingWithComps {
+  public class ItemSpawner : ThingWithComps {
 
     public void SpawnRandomQuantity(ThingDef TDef, int MinToSpawn, int MaxToSpawn) {
       int stack = Rand.RangeInclusive(MinToSpawn, MaxToSpawn);

@@ -112,8 +112,8 @@ namespace ExpandedPower {
         for (int d = 0; d < diodes.Count; d++) {
           for (int c = 0; c < diodes[d].ConnectedCathodes.Count; c++) {
             // Try to send energy to the connected cathodes
-            if (diodes[d].ConnectedCathodes[c].TrySendEnergy(Mathf.FloorToInt(currentEnergyToSend / cathodesFound))) {
-              energyUsedThisTick += Mathf.FloorToInt(currentEnergyToSend / cathodesFound);
+            if (diodes[d].ConnectedCathodes[c].TrySendEnergy(Mathf.FloorToInt(CurrentEnergyToSend / cathodesFound))) {
+              energyUsedThisTick += Mathf.FloorToInt(CurrentEnergyToSend / cathodesFound);
             }
           }
         } 
