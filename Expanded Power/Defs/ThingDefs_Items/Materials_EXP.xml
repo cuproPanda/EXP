@@ -60,7 +60,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>EXP_LatexBucket</defName>
 		<label>latex bucket</label>
-		<description>A bucket of natural latex. Can be baked in a furnace to produce a large amount of rubber.</description>
+		<description>A bucket of natural latex. Can be baked to produce a large amount of rubber.</description>
 		<graphicData>
 			<texPath>Cupro/Item/Material/LatexBucket</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -265,11 +265,13 @@
 			<statFactors>
 				<MaxHitPoints>0.75</MaxHitPoints>
 				<Beauty>1</Beauty>
-				<Cleanliness>0.75</Cleanliness>
-				<Flammability>0.1</Flammability>
+				<Cleanliness>0.5</Cleanliness>
+				<Flammability>0.2</Flammability>
 				<MeleeWeapon_Cooldown>1.15</MeleeWeapon_Cooldown>
 				<WorkToMake>0.8</WorkToMake>
 				<WorkToBuild>0.75</WorkToBuild>
+				<!-- Lead is poisonous, so it affects immune speed when made into a bed -->
+				<ImmunityGainSpeedFactor>0.75</ImmunityGainSpeedFactor>
 			</statFactors>
 			<smeltable>true</smeltable>
 		</stuffProps>
