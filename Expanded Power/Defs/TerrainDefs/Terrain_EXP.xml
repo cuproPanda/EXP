@@ -58,5 +58,23 @@
 		</CostList>
 		<constructEffect>ConstructMetal</constructEffect>
 	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase">
+		<DefName>EXP_LeadTile</DefName>
+		<label>lead tile</label>
+		<RenderPrecedence>244</RenderPrecedence>
+		<Description>Lead tiles, for a dark look. Not healthy to be around, but quick to build.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(97,95,103)</color>
+		<statBases>
+			<Cleanliness>-0.3</Cleanliness>
+			<WorkToBuild>150</WorkToBuild>
+		</statBases>
+		<EdgeType>Hard</EdgeType>
+		<CostList>
+			<EXP_Lead>5</EXP_Lead>
+		</CostList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
 
 </TerrainDefs>

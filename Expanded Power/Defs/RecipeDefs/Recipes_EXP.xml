@@ -11,6 +11,7 @@
 		<effectWorking>Cook</effectWorking>
 		<workAmount>500</workAmount>
 		<soundWorking>Recipe_Machining</soundWorking>
+		<targetCountAdjustment>10</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -71,6 +72,7 @@
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
+		<targetCountAdjustment>5</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -103,6 +105,7 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
+		<targetCountAdjustment>5</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -149,6 +152,7 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
+		<targetCountAdjustment>5</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -196,6 +200,7 @@
 		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>12000</workAmount>
 		<unfinishedThingDef>EXP_UnfinishedComponentBundle</unfinishedThingDef>
+		<targetCountAdjustment>5</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
