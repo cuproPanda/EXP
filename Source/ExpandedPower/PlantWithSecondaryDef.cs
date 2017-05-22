@@ -9,10 +9,11 @@ namespace ExpandedPower {
     // Make sure to have a duplicate defName for the secondary def and the parent def!
 
     // Customize how quickly this grows and when it is first harvestable
-    // By default, parentMinGrowth is the parent's harvestMinGrowth - once it has matured
     public float growDays;
-    public float parentMinGrowth;
+    public float parentMinGrowth = 0.5f;
 
+    // Customize what seasons this is allowed to grow in
+    // Useful for fruits that should only grow in spring, etc.
     public List<Season> limitedGrowSeasons;
 
     // What to harvest
