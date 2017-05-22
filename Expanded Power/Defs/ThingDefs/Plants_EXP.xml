@@ -92,7 +92,7 @@
 		<defName>EXP_PlantTreeRubber</defName>
 		<thingClass>ExpandedPower.PlantWithSecondary</thingClass>
 		<label>rubberwood tree</label>
-		<description>A tree high in natural latex. Can be harvested to yield rubber wood and latex.</description>
+		<description>A tree high in natural latex. Can be harvested to yield latex or cut down for rubber wood.</description>
 		<graphicData>
 			<texPath>Cupro/Object/Plant/TreeRubber</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
