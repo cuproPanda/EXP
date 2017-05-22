@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ==================== Buildings_Ancient ==================== -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="AncientLamppost"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>10</Steel>
+				<EXP_Copper>5</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Exotic ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="CrashedPsychicEmanatorShipPart"]/killedLeavings</xpath>
+		<value>
+			<killedLeavings>
+				<AIPersonaCore>1</AIPersonaCore>
+				<Steel>200</Steel>
+				<EXP_Copper>60</EXP_Copper>
+				<EXP_Lead>20</EXP_Lead>
+				<Silver>140</Silver>
+				<ChunkSlagSteel>2</ChunkSlagSteel>
+			</killedLeavings>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="CrashedPoisonShipPart"]/killedLeavings</xpath>
+		<value>
+			<killedLeavings>
+				<Steel>180</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<EXP_Lead>50</EXP_Lead>
+				<Silver>120</Silver>
+				<ChunkSlagSteel>2</ChunkSlagSteel>
+			</killedLeavings>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="ShipChunk"]/costList</xpath>
+		<value>
+			<costList>
+				<Component>10</Component>
+				<Steel>30</Steel>
+				<EXP_Copper>15</EXP_Copper>
+				<EXP_Lead>5</EXP_Lead>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Furniture ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="HospitalBed"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>40</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<EXP_Rubber>20</EXP_Rubber>
+				<Medicine>5</Medicine>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[@Name = "StandingLampBase"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>10</Steel>
+				<EXP_Copper>5</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="SunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>10</Steel>
+				<EXP_Copper>10</EXP_Copper>
+				<EXP_FusedQuartz>2</EXP_FusedQuartz>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Joy ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="TubeTelevision"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>65</Steel>
+				<EXP_Copper>35</EXP_Copper>
+				<Component>6</Component>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Misc ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="OrbitalTradeBeacon"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>25</Steel>
+				<EXP_Copper>20</EXP_Copper>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="CommsConsole"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>80</Steel>
+				<EXP_Copper>40</EXP_Copper>
+				<Component>4</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="FirefoamPopper"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Lead>25</EXP_Lead>
+				<EXP_Rubber>20</EXP_Rubber>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="MoisturePump"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>50</Steel>
+				<EXP_Copper>15</EXP_Copper>
+				<EXP_Rubber>30</EXP_Rubber>
+				<Component>3</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>200</Steel>
+				<EXP_Copper>150</EXP_Copper>
+				<EXP_Lead>30</EXP_Lead>
+				<Component>5</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>150</Steel>
+				<EXP_Copper>50</EXP_Copper>
+				<EXP_Lead>50</EXP_Lead>
+				<Component>4</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PodLauncher"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>60</Steel>
+				<EXP_InsulatedCable>10</EXP_InsulatedCable>
+				<Component>2</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="TransportPod"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>70</Steel>
+				<EXP_InsulatedCable>5</EXP_InsulatedCable>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="MultiAnalyzer"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>50</Steel>
+				<EXP_Copper>50</EXP_Copper>
+				<Plasteel>50</Plasteel>
+				<Gold>20</Gold>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="VitalsMonitor"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>130</Steel>
+				<EXP_Copper>50</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="CryptosleepCasket"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>170</Steel>
+				<EXP_FusedQuartz>5</EXP_FusedQuartz>
+				<Uranium>5</Uranium>
+				<Component>8</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="AncientCryptosleepCasket"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>170</Steel>
+				<EXP_FusedQuartz>5</EXP_FusedQuartz>
+				<Uranium>5</Uranium>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="AncientCryptosleepCasket"]/killedLeavings</xpath>
+		<value>
+			<killedLeavings>
+				<ChunkSlagSteel>1</ChunkSlagSteel>
+				<Steel>25</Steel>
+				<Uranium>3</Uranium>
+				<EXP_FusedQuartz>3</EXP_FusedQuartz>
+			</killedLeavings>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Natural ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="MineableComponents"]/building/mineableThing</xpath>
+		<value>
+			<mineableThing>EXP_MachinerySpawner</mineableThing>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="MineableComponents"]/building/mineableYield</xpath>
+		<value>
+			<mineableYield>1</mineableYield>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Power ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PowerConduit"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Cupro/Object/Linked/PowerConduit_Atlas</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PowerConduit"]/description</xpath>
+		<value>
+			<description>A set of electrical cables for moving power around. Can be placed under walls and other buildings. The exposed copper oxidizes easily and looks ugly.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PowerConduit"]/uiIconPath</xpath>
+		<value>
+			<uiIconPath>Cupro/Object/Linked/PowerConduit_MenuIcon</uiIconPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PowerConduit"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Copper>1</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="PowerSwitch"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>10</Steel>
+				<EXP_Copper>2</EXP_Copper>
+				<EXP_Rubber>1</EXP_Rubber>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="SolarGenerator"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>75</Steel>
+				<EXP_Lead>25</EXP_Lead>
+				<Component>3</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="SolarGenerator"]/comps</xpath>
+		<value>
+			<comps>
+				<li>
+					<compClass>ExpandedPower.CompSunlight</compClass>
+				</li>
+				<li Class="ExpandedPower.CompProperties_VariableSolarPower">
+					<compClass>ExpandedPower.CompVariablePowerPlantSolar</compClass>
+					<basePowerConsumption>-1</basePowerConsumption>
+					<transmitsPower>true</transmitsPower>
+					<fullSunPower>1700</fullSunPower>
+					<nightPower>0</nightPower>
+				</li>
+				<li Class="CompProperties_Breakdownable"/>
+			</comps>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="GeothermalGenerator"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>300</Steel>
+				<EXP_Lead>50</EXP_Lead>
+				<EXP_InsulatedCable>20</EXP_InsulatedCable>
+				<Component>8</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Battery"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Lead>30</EXP_Lead>
+				<EXP_Copper>20</EXP_Copper>
+				<Component>2</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="WindTurbine"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>80</Steel>
+				<EXP_Copper>20</EXP_Copper>
+				<EXP_Lead>20</EXP_Lead>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Production ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="ElectricTailoringBench"]/CostList</xpath>
+		<value>
+			<costList>
+				<Steel>20</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<Component>3</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="ElectricSmithy"]/CostList</xpath>
+		<value>
+			<costList>
+				<Steel>60</Steel>
+				<EXP_Copper>40</EXP_Copper>
+				<Component>4</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="TableMachining"]/CostList</xpath>
+		<value>
+			<costList>
+				<Steel>100</Steel>
+				<EXP_Copper>40</EXP_Copper>
+				<EXP_InsulatedCable>10</EXP_InsulatedCable>
+				<Component>5</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="ElectricStove"]/CostList</xpath>
+		<value>
+			<costList>
+				<Steel>50</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<Component>2</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="Brewery"]/CostList</xpath>
+		<value>
+			<costList>
+				<WoodLog>120</WoodLog>
+				<EXP_Copper>20</EXP_Copper>
+				<EXP_Rubber>20</EXP_Rubber>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="DrugLab"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>50</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<EXP_Rubber>20</EXP_Rubber>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="ElectricSmelter"]/CostList</xpath>
+		<value>
+			<costList>
+				<Steel>120</Steel>
+				<EXP_Copper>40</EXP_Copper>
+				<EXP_InsulatedCable>10</EXP_InsulatedCable>
+				<Component>2</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Refinery"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>100</Steel>
+				<EXP_Copper>30</EXP_Copper>
+				<EXP_Rubber>20</EXP_Rubber>
+				<Component>3</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="ComponentAssemblyBench"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>150</Steel>
+				<EXP_Copper>40</EXP_Copper>
+				<EXP_InsulatedCable>10</EXP_InsulatedCable>
+				<Component>8</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="HiTechResearchBench"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>80</Steel>
+				<EXP_InsulatedCable>20</EXP_InsulatedCable>
+				<Component>8</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[DefName="ElectricCrematorium"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>15</Steel>
+				<EXP_Copper>10</EXP_Copper>
+				<Component>2</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="HydroponicsBasin"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>90</Steel>
+				<EXP_Rubber>5</EXP_Rubber>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="DeepDrill"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>90</Steel>
+				<EXP_Lead>30</EXP_Lead>
+				<EXP_InsulatedCable>10</EXP_InsulatedCable>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Ship ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Ship_Beam"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>150</Steel>
+				<Plasteel>150</Plasteel>
+				<EXP_InsulatedCable>20</EXP_InsulatedCable>
+				<EXP_Copper>30</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Ship_CryptosleepCasket"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>425</Steel>
+				<EXP_Copper>50</EXP_Copper>
+				<EXP_Rubber>30</EXP_Rubber>
+				<Component>4</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Ship_ComputerCore"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>600</Steel>
+				<EXP_InsulatedCable>50</EXP_InsulatedCable>
+				<Gold>100</Gold>
+				<AIPersonaCore>1</AIPersonaCore>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Ship_Reactor"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Lead>350</EXP_Lead>
+				<Plasteel>500</Plasteel>
+				<Uranium>150</Uranium>
+				<Component>25</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Ship_Engine"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Lead>150</EXP_Lead>
+				<Plasteel>300</Plasteel>
+				<Uranium>100</Uranium>
+				<Component>25</Component>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Structure ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Autodoor"]/costList</xpath>
+		<value>
+			<costList>
+				<EXP_Copper>40</EXP_Copper>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+	<!-- ==================== Buildings_Temperature ==================== -->
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Heater"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>45</Steel>
+				<EXP_Copper>20</EXP_Copper>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="Cooler"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>70</Steel>
+				<EXP_Copper>20</EXP_Copper>
+				<EXP_Rubber>10</EXP_Rubber>
+				<Component>3</Component>
+			</costList>
+		</value>
+	</Operation>
+
+
+
+
+
+
+	<!-- ==================== Recipes_Production ==================== -->
+
+
+
+
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//RecipeDef[defName="MakeComponent"]/workAmount</xpath>
+		<value>
+			<workAmount>6000</workAmount>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//RecipeDef[defName="MakeComponent"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>EXP_Copper</li>
+						</thingDefs>
+					</filter>
+					<count>10</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>EXP_Rubber</li>
+						</thingDefs>
+					</filter>
+					<count>5</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>10</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//RecipeDef[defName="MakeComponent"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<thingDefs>
+					<li>EXP_Copper</li>
+					<li>EXP_Rubber</li>
+					<li>Steel</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+</Patch>

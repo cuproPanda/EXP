@@ -127,8 +127,8 @@
 		<growDays>5</growDays>
 		<parentMinGrowth>0.5</parentMinGrowth>
 		<limitedGrowSeasons>
+			<li>Spring</li>
 			<li>Summer</li>
-			<li>Fall</li>
 		</limitedGrowSeasons>
 		<harvestedThingDef>EXP_LatexBucket</harvestedThingDef>
 		<specialThingDefLabel>Latex</specialThingDefLabel>
