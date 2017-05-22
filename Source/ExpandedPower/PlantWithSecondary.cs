@@ -163,6 +163,12 @@ namespace RimWorld {
       }
       // Reset the growth and return the secondary thing
       sec_GrowthInt = 0;
+
+      // If there is a blooming graphic, dirty the map mesh here to reset the graphic
+      if (bloomingGraphic != null) {
+        Map.mapDrawer.MapMeshDirty(Position, MapMeshFlag.Things);
+      }
+
       return secondary;
     }
 
