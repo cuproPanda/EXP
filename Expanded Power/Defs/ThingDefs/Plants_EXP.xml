@@ -90,6 +90,7 @@
 
 	<ThingDef ParentName="TreeBase">
 		<defName>EXP_PlantTreeRubber</defName>
+		<thingClass>ExpandedPower.PlantWithSecondary</thingClass>
 		<label>rubberwood tree</label>
 		<description>A tree high in natural latex. Can be harvested to yield rubber wood and latex.</description>
 		<graphicData>
@@ -102,6 +103,7 @@
 		<plant>
 			<leaflessGraphicPath>Cupro/Object/Plant/TreeRubber_Leafless</leaflessGraphicPath>
 			<growDays>20</growDays>
+			<harvestMinGrowth>0.9</harvestMinGrowth>
 			<harvestWork>1000</harvestWork>
 			<harvestedThingDef>EXP_RubberTreeItemSpawner</harvestedThingDef>
 			<harvestYield>1</harvestYield>
@@ -120,6 +122,18 @@
 			</wildBiomes>
 		</plant>
 	</ThingDef>
+	<ExpandedPower.PlantWithSecondaryDef>
+		<defName>EXP_PlantTreeRubber</defName>
+		<growDays>5</growDays>
+		<parentMinGrowth>0.5</parentMinGrowth>
+		<limitedGrowSeasons>
+			<li>Summer</li>
+			<li>Fall</li>
+		</limitedGrowSeasons>
+		<harvestedThingDef>EXP_LatexBucket</harvestedThingDef>
+		<specialThingDefLabel>Latex</specialThingDefLabel>
+		<maxToHarvest>1</maxToHarvest>
+	</ExpandedPower.PlantWithSecondaryDef>
 
 	<ThingDef ParentName="PlantBase">
 		<defName>EXP_PlantRubber</defName>

@@ -15,5 +15,12 @@
   <EXP_PowerRaise_L>+50 W</EXP_PowerRaise_L>
   <EXP_PowerRaise_D>Raise power usage by 50 watts</EXP_PowerRaise_D>
   <EXP_PowerUsage>Set to send {0} W of power</EXP_PowerUsage>
+  
+  <!-- Plants -->
+  <EXP_CannotGrowBadSeason>not growing (out of season).</EXP_CannotGrowBadSeason>
+  <EXP_DesignatorHarvestSecondary>Harvest secondary resource</EXP_DesignatorHarvestSecondary>
+  <EXP_DesignatorHarvestSecondaryDesc>Designate colonists to harvest secondary resources.</EXP_DesignatorHarvestSecondaryDesc>
+  <EXP_MustDesignatePlantsWithSecondary>Must designate plants with a secondary resource.</EXP_MustDesignatePlantsWithSecondary>
+  <EXP_MustDesignateHarvestableSecondary>Must designate plants with a harvestable secondary resource.</EXP_MustDesignateHarvestableSecondary>
 
 </LanguageData>
