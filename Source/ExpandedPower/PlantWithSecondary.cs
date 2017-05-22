@@ -2,20 +2,24 @@
 using System.Text;
 
 using UnityEngine;
-using RimWorld;
 using Verse;
 
-namespace ExpandedPower {
-
+// Moved to RimWorld namespace to allow multiple mod usage
+namespace RimWorld {
+  [StaticConstructorOnStartup]
   public class PlantWithSecondary : Plant {
 
     // Def reference for the secondary thing
     private PlantWithSecondaryDef secondaryDef;
 
+    // Reference for the harvest designation
     private DesignationDef harvestDesignation;
 
     // Label for secondary thing. Used in case a special string is needed
     private string thingLabel;
+
+    // The graphic while this plant is producing secondary things
+    private Graphic bloomingGraphic;
 
     // Growth of the secondary thing
     private float sec_GrowthInt = -1f;
@@ -70,6 +74,16 @@ namespace ExpandedPower {
       }
     }
 
+    // Override the graphic, allowing this plant to potentially bloom
+    public override Graphic Graphic {
+      get {
+        if (Sec_HarvestableNow && !LeaflessNow && bloomingGraphic != null) {
+          return bloomingGraphic;
+        }
+        return base.Graphic;
+      }
+    }
+
 
     public override void ExposeData() {
       base.ExposeData();
@@ -99,6 +113,13 @@ namespace ExpandedPower {
       else {
         thingLabel = secondaryDef.specialThingDefLabel.CapitalizeFirst();
       }
+
+      // Create the blooming graphic if there is one
+      if (!secondaryDef.bloomingGraphicPath.NullOrEmpty()) {
+        LongEventHandler.ExecuteWhenFinished(delegate {
+          bloomingGraphic = GraphicDatabase.Get(def.graphicData.graphicClass, secondaryDef.bloomingGraphicPath, def.graphic.Shader, def.graphicData.drawSize, def.graphicData.color, def.graphicData.colorTwo);
+        });
+      }
     }
 
 
@@ -112,10 +133,11 @@ namespace ExpandedPower {
             sec_GrowthInt += (GrowthPerTick * 2000f) * AdjustedGrowth;
             Mathf.Clamp01(sec_GrowthInt);
           }
-        } 
+        }
       }
       // If this isn't the right season, restart growth
-      else {
+      // Disabled in DevMode to allow insta-grow button
+      else if (!Prefs.DevMode) {
         sec_GrowthInt = 0;
       }
     }

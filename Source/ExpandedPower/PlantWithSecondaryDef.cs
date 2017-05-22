@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using RimWorld;
 using Verse;
 
-namespace ExpandedPower {
+// Moved to RimWorld namespace to allow multiple mod usage
+namespace RimWorld {
 
   public class PlantWithSecondaryDef : Def {
 
@@ -11,6 +11,9 @@ namespace ExpandedPower {
     // Customize how quickly this grows and when it is first harvestable
     public float growDays;
     public float parentMinGrowth = 0.5f;
+
+    // If the plant uses a different graphic when blooming
+    public string bloomingGraphicPath;
 
     // Customize what seasons this is allowed to grow in
     // Useful for fruits that should only grow in spring, etc.
