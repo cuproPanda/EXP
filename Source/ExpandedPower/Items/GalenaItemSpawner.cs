@@ -21,7 +21,7 @@ namespace ExpandedPower {
         SpawnRandomQuantity(ThingDef.Named("Silver"), 10, 15);
       }
 
-      SpawnRandomQuantity(ThingDef.Named("EXP_Lead"), 10, 20);
+      SpawnRandomQuantity(ThingDef.Named("EXP_Lead"), 20, 40);
       Destroy();
     }
   }
