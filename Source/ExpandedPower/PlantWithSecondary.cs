@@ -126,6 +126,10 @@ namespace RimWorld {
     public override void TickLong() {
       base.TickLong();
 
+      if (Destroyed) {
+        return;
+      }
+
       // If the parent is able to grow, grow the secondary thing as well
       if (GrowsThisSeason) {
         if (GenPlant.GrowthSeasonNow(Position, Map)) {
