@@ -8,7 +8,7 @@
 		<label>insulated cables</label>
 		<description>Allows colonists to smith insulated cables, which can be buried under the ground or used in more advanced recipes.</description>
 		<tab>cP</tab>
-		<baseCost>100</baseCost>
+		<baseCost>300</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>Electricity</li>

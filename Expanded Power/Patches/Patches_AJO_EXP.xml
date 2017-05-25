@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[defName="AJO_MakeArcadeEmpty"]/ingredients</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>50</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>EXP_Copper</li>
+								</thingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>EXP_FusedQuartz</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[defName="AJO_MakeArcadeEmpty"]/fixedIngredientFilter</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>Steel</li>
+							<li>EXP_Copper</li>
+							<li>EXP_FusedQuartz</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[@Name="AJO_CartCopyBase"]/ingredients</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>EXP_Copper</li>
+								</thingDefs>
+							</filter>
+							<count>10</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>5</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[@Name="AJO_CartCopyBase"]/fixedIngredientFilter</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>EXP_Copper</li>
+							<li>Steel</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>//ThingDef[DefName="AJO_TableArcadeConstruction"]/CostList</xpath>
+		<value>
+			<CostList>
+				<EXP_Copper>100</EXP_Copper>
+				<Steel>50</Steel>
+				<Component>1</Component>
+			</CostList>
+		</value>
+	</Operation>
+
+</Patch>
