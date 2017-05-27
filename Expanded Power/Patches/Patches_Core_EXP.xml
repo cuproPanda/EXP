@@ -4,7 +4,7 @@
 	<!-- ==================== Buildings_Ancient ==================== -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="AncientLamppost"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="AncientLamppost"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>10</Steel>
@@ -22,7 +22,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="CrashedPsychicEmanatorShipPart"]/killedLeavings</xpath>
+		<xpath>/Defs/ThingDef[defName="CrashedPsychicEmanatorShipPart"]/killedLeavings</xpath>
 		<value>
 			<killedLeavings>
 				<AIPersonaCore>1</AIPersonaCore>
@@ -36,7 +36,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="CrashedPoisonShipPart"]/killedLeavings</xpath>
+		<xpath>/Defs/ThingDef[defName="CrashedPoisonShipPart"]/killedLeavings</xpath>
 		<value>
 			<killedLeavings>
 				<Steel>180</Steel>
@@ -49,7 +49,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="ShipChunk"]/costList</xpath>
+		<xpath>/Defs/ThingDef[defName="ShipChunk"]/costList</xpath>
 		<value>
 			<costList>
 				<Component>10</Component>
@@ -69,7 +69,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="HospitalBed"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="HospitalBed"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>40</Steel>
@@ -81,7 +81,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[@Name = "StandingLampBase"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[@Name = "StandingLampBase"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>10</Steel>
@@ -91,7 +91,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="SunLamp"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="SunLamp"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>10</Steel>
@@ -110,7 +110,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="TubeTelevision"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="TubeTelevision"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>65</Steel>
@@ -129,7 +129,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="OrbitalTradeBeacon"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="OrbitalTradeBeacon"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>25</Steel>
@@ -140,7 +140,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="CommsConsole"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="CommsConsole"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>80</Steel>
@@ -151,7 +151,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="FirefoamPopper"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="FirefoamPopper"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Lead>25</EXP_Lead>
@@ -162,7 +162,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="MoisturePump"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="MoisturePump"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>50</Steel>
@@ -174,7 +174,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>200</Steel>
@@ -186,7 +186,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>150</Steel>
@@ -198,7 +198,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PodLauncher"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="PodLauncher"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>60</Steel>
@@ -209,7 +209,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="TransportPod"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="TransportPod"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>70</Steel>
@@ -220,7 +220,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="MultiAnalyzer"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="MultiAnalyzer"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>50</Steel>
@@ -232,7 +232,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="VitalsMonitor"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="VitalsMonitor"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>130</Steel>
@@ -242,7 +242,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="CryptosleepCasket"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="CryptosleepCasket"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>170</Steel>
@@ -254,7 +254,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="AncientCryptosleepCasket"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="AncientCryptosleepCasket"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>170</Steel>
@@ -265,7 +265,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="AncientCryptosleepCasket"]/killedLeavings</xpath>
+		<xpath>/Buildings/ThingDef[defName="AncientCryptosleepCasket"]/killedLeavings</xpath>
 		<value>
 			<killedLeavings>
 				<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -285,14 +285,14 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="MineableComponents"]/building/mineableThing</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="MineableComponents"]/building/mineableThing</xpath>
 		<value>
 			<mineableThing>EXP_MachinerySpawner</mineableThing>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="MineableComponents"]/building/mineableYield</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="MineableComponents"]/building/mineableYield</xpath>
 		<value>
 			<mineableYield>1</mineableYield>
 		</value>
@@ -307,28 +307,28 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PowerConduit"]/graphicData/texPath</xpath>
+		<xpath>/Buildings/ThingDef[defName="PowerConduit"]/graphicData/texPath</xpath>
 		<value>
 			<texPath>Cupro/Object/Linked/PowerConduit_Atlas</texPath>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PowerConduit"]/description</xpath>
+		<xpath>/Buildings/ThingDef[defName="PowerConduit"]/description</xpath>
 		<value>
 			<description>A set of electrical cables for moving power around. Can be placed under walls and other buildings. The exposed copper oxidizes easily and looks ugly.</description>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PowerConduit"]/uiIconPath</xpath>
+		<xpath>/Buildings/ThingDef[defName="PowerConduit"]/uiIconPath</xpath>
 		<value>
 			<uiIconPath>Cupro/Object/Linked/PowerConduit_MenuIcon</uiIconPath>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PowerConduit"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="PowerConduit"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Copper>1</EXP_Copper>
@@ -337,7 +337,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="PowerSwitch"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="PowerSwitch"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>10</Steel>
@@ -348,7 +348,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="SolarGenerator"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="SolarGenerator"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>75</Steel>
@@ -359,7 +359,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="SolarGenerator"]/comps</xpath>
+		<xpath>/Buildings/ThingDef[defName="SolarGenerator"]/comps</xpath>
 		<value>
 			<comps>
 				<li>
@@ -378,7 +378,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="GeothermalGenerator"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="GeothermalGenerator"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>300</Steel>
@@ -390,7 +390,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Battery"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="Battery"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Lead>30</EXP_Lead>
@@ -401,7 +401,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="WindTurbine"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="WindTurbine"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>80</Steel>
@@ -420,7 +420,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="ElectricTailoringBench"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="ElectricTailoringBench"]/CostList</xpath>
 		<value>
 			<costList>
 				<Steel>20</Steel>
@@ -431,7 +431,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="ElectricSmithy"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="ElectricSmithy"]/CostList</xpath>
 		<value>
 			<costList>
 				<Steel>60</Steel>
@@ -442,7 +442,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="TableMachining"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="TableMachining"]/CostList</xpath>
 		<value>
 			<costList>
 				<Steel>100</Steel>
@@ -454,7 +454,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="ElectricStove"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="ElectricStove"]/CostList</xpath>
 		<value>
 			<costList>
 				<Steel>50</Steel>
@@ -465,7 +465,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="Brewery"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="Brewery"]/CostList</xpath>
 		<value>
 			<costList>
 				<WoodLog>120</WoodLog>
@@ -476,7 +476,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="DrugLab"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="DrugLab"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>50</Steel>
@@ -487,7 +487,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="ElectricSmelter"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="ElectricSmelter"]/CostList</xpath>
 		<value>
 			<costList>
 				<Steel>120</Steel>
@@ -499,7 +499,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Refinery"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="Refinery"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>100</Steel>
@@ -511,7 +511,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="ComponentAssemblyBench"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="ComponentAssemblyBench"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>150</Steel>
@@ -523,7 +523,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="HiTechResearchBench"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="HiTechResearchBench"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>80</Steel>
@@ -534,7 +534,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[DefName="ElectricCrematorium"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="ElectricCrematorium"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>15</Steel>
@@ -545,7 +545,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="HydroponicsBasin"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="HydroponicsBasin"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>90</Steel>
@@ -556,7 +556,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="DeepDrill"]/costList</xpath>
+		<xpath>/ThingDefs/ThingDef[defName="DeepDrill"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>90</Steel>
@@ -575,7 +575,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Ship_Beam"]/costList</xpath>
+		<xpath>/GameData/ThingDef[defName="Ship_Beam"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>150</Steel>
@@ -587,7 +587,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Ship_CryptosleepCasket"]/costList</xpath>
+		<xpath>/GameData/ThingDef[defName="Ship_CryptosleepCasket"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>425</Steel>
@@ -599,7 +599,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Ship_ComputerCore"]/costList</xpath>
+		<xpath>/GameData/ThingDef[defName="Ship_ComputerCore"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>600</Steel>
@@ -611,7 +611,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Ship_Reactor"]/costList</xpath>
+		<xpath>/GameData/ThingDef[defName="Ship_Reactor"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Lead>350</EXP_Lead>
@@ -623,7 +623,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Ship_Engine"]/costList</xpath>
+		<xpath>/GameData/ThingDef[defName="Ship_Engine"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Lead>150</EXP_Lead>
@@ -643,7 +643,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Autodoor"]/costList</xpath>
+		<xpath>/Buildings/ThingDef[defName="Autodoor"]/costList</xpath>
 		<value>
 			<costList>
 				<EXP_Copper>40</EXP_Copper>
@@ -661,7 +661,7 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Heater"]/costList</xpath>
+		<xpath>/Defs/ThingDef[defName="Heater"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>45</Steel>
@@ -672,7 +672,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//ThingDef[defName="Cooler"]/costList</xpath>
+		<xpath>/Defs/ThingDef[defName="Cooler"]/costList</xpath>
 		<value>
 			<costList>
 				<Steel>70</Steel>
@@ -696,14 +696,14 @@
 
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//RecipeDef[defName="MakeComponent"]/workAmount</xpath>
+		<xpath>/RecipeDefs/RecipeDef[defName="MakeComponent"]/workAmount</xpath>
 		<value>
 			<workAmount>6000</workAmount>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//RecipeDef[defName="MakeComponent"]/ingredients</xpath>
+		<xpath>/RecipeDefs/RecipeDef[defName="MakeComponent"]/ingredients</xpath>
 		<value>
 			<ingredients>
 				<li>
@@ -735,7 +735,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//RecipeDef[defName="MakeComponent"]/fixedIngredientFilter</xpath>
+		<xpath>/RecipeDefs/RecipeDef[defName="MakeComponent"]/fixedIngredientFilter</xpath>
 		<value>
 			<fixedIngredientFilter>
 				<thingDefs>

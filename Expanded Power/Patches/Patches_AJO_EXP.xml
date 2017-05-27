@@ -5,7 +5,7 @@
 		<success>Always</success>
 		<Operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//RecipeDef[defName="AJO_MakeArcadeEmpty"]/ingredients</xpath>
+				<xpath>/RecipeDefs/RecipeDef[defName="AJO_MakeArcadeEmpty"]/ingredients</xpath>
 				<value>
 					<ingredients>
 						<li>
@@ -36,7 +36,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>//RecipeDef[defName="AJO_MakeArcadeEmpty"]/fixedIngredientFilter</xpath>
+				<xpath>/RecipeDefs/RecipeDef[defName="AJO_MakeArcadeEmpty"]/fixedIngredientFilter</xpath>
 				<value>
 					<fixedIngredientFilter>
 						<thingDefs>
@@ -54,7 +54,7 @@
 		<success>Always</success>
 		<Operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//RecipeDef[@Name="AJO_CartCopyBase"]/ingredients</xpath>
+				<xpath>/RecipeDefs/RecipeDef[@Name="AJO_CartCopyBase"]/ingredients</xpath>
 				<value>
 					<ingredients>
 						<li>
@@ -77,7 +77,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>//RecipeDef[@Name="AJO_CartCopyBase"]/fixedIngredientFilter</xpath>
+				<xpath>/RecipeDefs/RecipeDef[@Name="AJO_CartCopyBase"]/fixedIngredientFilter</xpath>
 				<value>
 					<fixedIngredientFilter>
 						<thingDefs>
@@ -92,7 +92,7 @@
 
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
-		<xpath>//ThingDef[DefName="AJO_TableArcadeConstruction"]/CostList</xpath>
+		<xpath>/ThingDefs/ThingDef[DefName="AJO_TableArcadeConstruction"]/CostList</xpath>
 		<value>
 			<CostList>
 				<EXP_Copper>100</EXP_Copper>
