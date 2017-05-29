@@ -11,7 +11,7 @@
 			</costList>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
 		<xpath>/ThingDefs/ThingDef[DefName="Canningstove"]/CostList</xpath>
@@ -22,7 +22,7 @@
 			</CostList>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
 		<xpath>/Buildings/ThingDef[defName="HeatedSunLamp"]/costList</xpath>
@@ -56,7 +56,28 @@
 			</costList>
 		</value>
 	</Operation>
-	
+
+	<!-- This check is needed because Vegetable Garden increases the base cost of the sun lamp -->
+	<!-- I don't want to increase the cost unless it has already been increased -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="ExpandedPower.PatchOperationFindMod">
+				<modName>Vegetable Garden </modName><!-- sic -->
+			</li>
+			<li Class="PatchOperationReplace">
+				<success>Always</success>
+				<xpath>/Buildings/ThingDef[defName="SunLamp"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>28</Steel>
+						<EXP_Copper>12</EXP_Copper>
+						<EXP_FusedQuartz>2</EXP_FusedQuartz>
+					</costList>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
 		<xpath>/Buildings/ThingDef[defName="SmallSunLamp"]/costList</xpath>
