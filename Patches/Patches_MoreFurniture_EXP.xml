@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="Anon2EndTableLight"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>5</Steel>
+				<EXP_Copper>5</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="Anon2RoyalEndTableLight"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>5</Steel>
+				<EXP_Copper>5</EXP_Copper>
+				<Gold>10</Gold>
+			</costList>
+		</value>
+	</Operation>
+
+</Patch>

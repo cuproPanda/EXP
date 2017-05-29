@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/ThingDefs/ThingDef[defName="POW_Window"]/CostList</xpath>
+		<value>
+			<CostList>
+				<Steel>5</Steel>
+				<EXP_FusedQuartz>1</EXP_FusedQuartz>
+			</CostList>
+		</value>
+	</Operation>
+
+</Patch>

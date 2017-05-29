@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/ThingDefs/ThingDef[defName="Outdoorlight"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>25</Steel>
+				<EXP_Copper>10</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/ThingDefs/ThingDef[DefName="Canningstove"]/CostList</xpath>
+		<value>
+			<CostList>
+				<Steel>30</Steel>
+				<EXP_Copper>10</EXP_Copper>
+			</CostList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="HeatedSunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>80</Steel>
+				<EXP_Copper>50</EXP_Copper>
+				<EXP_FusedQuartz>2</EXP_FusedQuartz>
+			</costList>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="HeatedSmallSunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>75</Steel>
+				<EXP_Copper>45</EXP_Copper>
+				<EXP_FusedQuartz>1</EXP_FusedQuartz>
+			</costList>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="HeatedMiniSunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>65</Steel>
+				<EXP_Copper>35</EXP_Copper>
+				<Component>1</Component>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="SmallSunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>14</Steel>
+				<EXP_Copper>6</EXP_Copper>
+				<EXP_FusedQuartz>1</EXP_FusedQuartz>
+			</costList>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>/Buildings/ThingDef[defName="MiniSunLamp"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>10</Steel>
+				<EXP_Copper>5</EXP_Copper>
+			</costList>
+		</value>
+	</Operation>
+
+</Patch>
