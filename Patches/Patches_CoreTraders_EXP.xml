@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/DefPackage-TraderKindDef/TraderKindDef[defName = "Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_RubberWood</thingDef>
+						<countRange>
+							<min>250</min>
+							<max>400</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Copper</thingDef>
+						<countRange>
+							<min>150</min>
+							<max>300</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Lead</thingDef>
+						<countRange>
+							<min>150</min>
+							<max>300</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Rubber</thingDef>
+						<countRange>
+							<min>-50</min>
+							<max>100</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Quartz</thingDef>
+						<countRange>
+							<min>50</min>
+							<max>100</max>
+						</countRange>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/DefPackage-TraderKindDef/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_RubberWood</thingDef>
+						<countRange>
+							<min>500</min>
+							<max>800</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Copper</thingDef>
+						<countRange>
+							<min>400</min>
+							<max>700</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Lead</thingDef>
+						<countRange>
+							<min>400</min>
+							<max>700</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_InsulatedCable</thingDef>
+						<countRange>
+							<min>50</min>
+							<max>150</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_FusedQuartz</thingDef>
+						<countRange>
+							<min>50</min>
+							<max>100</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Rubber</thingDef>
+						<countRange>
+							<min>-50</min>
+							<max>100</max>
+						</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>EXP_Quartz</thingDef>
+						<countRange>
+							<min>50</min>
+							<max>100</max>
+						</countRange>
+					</li>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+</Patch>
