@@ -73,7 +73,8 @@
 			</mineableScatterLumpSizeRange>
 		</building>
 	</ThingDef>
-
+	
+	<!-- This should be phased out in A18 -->
 	<ThingDef ParentName="RockBase">
 		<defName>EXP_MineableQuartzTraces</defName>
 		<label>quartz traces</label>
@@ -93,7 +94,8 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>EXP_QuartzSpawner</mineableThing>
 			<mineableYield>1</mineableYield>
-			<mineableScatterCommonality>2</mineableScatterCommonality>
+			<!-- This should be phased out in A18 -->
+			<mineableScatterCommonality>0.1</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>1</min>
 				<max>2</max>
@@ -120,7 +122,7 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>EXP_CopperSpawner</mineableThing>
 			<mineableYield>1</mineableYield>
-			<mineableScatterCommonality>0.65</mineableScatterCommonality>
+			<mineableScatterCommonality>0.9</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>8</min>
 				<max>25</max>
@@ -147,7 +149,7 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>EXP_GalenaSpawner</mineableThing>
 			<mineableYield>1</mineableYield>
-			<mineableScatterCommonality>0.65</mineableScatterCommonality>
+			<mineableScatterCommonality>0.9</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>6</min>
 				<max>17</max>
