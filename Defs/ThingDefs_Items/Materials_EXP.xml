@@ -68,7 +68,9 @@
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
 		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
 			<MarketValue>5</MarketValue>
+			<DeteriorationRate>10</DeteriorationRate>
 			<Mass>2.4</Mass>
 		</statBases>
 		<thingCategories>

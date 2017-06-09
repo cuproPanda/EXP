@@ -17,12 +17,6 @@
 	
 	
 	<ThingDef ParentName="ItemSpawnerBase">
-		<defName>EXP_RubberTreeItemSpawner</defName>
-		<thingClass>ExpandedPower.RubberTreeItemSpawner</thingClass>
-		<label>rubber spawner</label>
-	</ThingDef>
-	
-	<ThingDef ParentName="ItemSpawnerBase">
 		<defName>EXP_CopperSpawner</defName>
 		<thingClass>ExpandedPower.CopperItemSpawner</thingClass>
 		<label>copper spawner</label>

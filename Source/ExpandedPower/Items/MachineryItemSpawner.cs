@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace ExpandedPower {
 
@@ -10,15 +11,14 @@ namespace ExpandedPower {
       // Give a 10% chance to spawn copper or rubber
       if (Rand.Range(0, 100) < 10) {
         if (Rand.Bool) {
-          SpawnRandomQuantity(ThingDef.Named("EXP_Copper"), 5, 10);
+          SpawnRandomQuantity(ExpDefOf.EXP_Copper, 5, 10, Position, map, ThingPlaceMode.Near, false);
         }
         else {
-          SpawnRandomQuantity(ThingDef.Named("EXP_Rubber"), 1, 5);
+          SpawnRandomQuantity(ExpDefOf.EXP_Rubber, 2, 5, Position, map, ThingPlaceMode.Near, false);
         }
       }
 
-      SpawnExactQuantity(ThingDef.Named("Component"), 2);
-      Destroy();
+      SpawnExactQuantity(ThingDefOf.Component, 2, Position, map, ThingPlaceMode.Direct);
     }
   }
 }

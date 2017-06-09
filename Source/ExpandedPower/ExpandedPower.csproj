@@ -55,6 +55,7 @@
     <Compile Include="Components\CompSunlight.cs" />
     <Compile Include="Components\CompVariablePowerPlantSolar.cs" />
     <Compile Include="Designator_PlantsHarvestSecondary.cs" />
+    <Compile Include="ExpDefOf.cs" />
     <Compile Include="Items\CopperItemSpawner.cs" />
     <Compile Include="Items\GalenaItemSpawner.cs" />
     <Compile Include="Items\ItemSpawner.cs" />
@@ -65,9 +66,9 @@
     <Compile Include="PlantWithSecondaryDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Items\QuartzItemSpawner.cs" />
-    <Compile Include="Items\RubberTreeItemSpawner.cs" />
     <Compile Include="Enums\WeatherLight.cs" />
     <Compile Include="AI\WorkGiver_GrowerHarvestSecondary.cs" />
+    <Compile Include="Static.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

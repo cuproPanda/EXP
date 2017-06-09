@@ -1,12 +1,8 @@
 ﻿using Verse;
 
 namespace ExpandedPower {
-  [StaticConstructorOnStartup]
-  class Building_InvertedDaylightSensor : Building_DaylightSensor {
 
-    // Paths for graphics
-    public static readonly Graphic InSensorOn = GraphicDatabase.Get<Graphic_Single>("Cupro/Object/Utility/IDS/InDaylightSensor_On");
-    public static readonly Graphic InSensorOff = GraphicDatabase.Get<Graphic_Single>("Cupro/Object/Utility/IDS/InDaylightSensor_Off");
+  public class Building_InvertedDaylightSensor : Building_DaylightSensor {
 
     // This building is an inverted daylight sensor
     public override bool Inverted {
@@ -22,9 +18,9 @@ namespace ExpandedPower {
     public override Graphic Graphic {
       get {
         if (!InSunlight) {
-          return InSensorOn;
+          return Static.GraphicInvSensorOn;
         }
-        return InSensorOff;
+        return Static.GraphicInvSensorOff;
       }
     }
   }

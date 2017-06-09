@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
+using ExpandedPower;
 using UnityEngine;
 using Verse;
 
@@ -124,7 +125,7 @@ namespace RimWorld {
       }
 
       secondaryDef = DefDatabase<PlantWithSecondaryDef>.GetNamed(def.defName);
-      harvestDesignation = DefDatabase<DesignationDef>.GetNamed("EXP_Designator_PlantsHarvestSecondary");
+      harvestDesignation = Static.DesignationHarvestSecondary;
 
       // Allow the secondary thing to start grown similar to the parent plant
       if (sec_GrowthInt == -1f) {
@@ -216,7 +217,7 @@ namespace RimWorld {
       // Add button for insta-growing the secondary thing
       Command_Action DevGrow = new Command_Action() {
         defaultLabel = "DEBUG: Grow " + thingLabel,
-        activateSound = SoundDef.Named("Click"),
+        activateSound = SoundDefOf.Click,
         action = () => { sec_GrowthInt = 1f; },
       };
 
@@ -227,9 +228,9 @@ namespace RimWorld {
       // Add button for manually designating harvesting
       Command_Action DesignateHarvest = new Command_Action() {
         defaultLabel = "DesignatorHarvest".Translate(),
-        defaultDesc = "EXP_DesignatorHarvestSecondaryDesc".Translate(),
-        icon = ContentFinder<Texture2D>.Get("Cupro/UI/Designations/HarvestSecondary"),
-        activateSound = SoundDef.Named("Click"),
+        defaultDesc = Static.DescriptionHarvestSecondary,
+        icon = Static.texHarvestSecondary,
+        activateSound = SoundDefOf.Click,
         action = () => {
           Map.designationManager.AddDesignation(new Designation(this, harvestDesignation));
         },
@@ -265,7 +266,7 @@ namespace RimWorld {
             }));
           }
           else {
-            stringBuilder.AppendLine(thingLabel + " " + "EXP_CannotGrowBadSeason".Translate());
+            stringBuilder.AppendLine(thingLabel + " " + Static.ReportBadSeason);
           }
         }
 
@@ -309,7 +310,7 @@ namespace RimWorld {
             }));
           }
           else {
-            stringBuilder.AppendLine(thingLabel + " " + "EXP_CannotGrowBadSeason".Translate());
+            stringBuilder.AppendLine(thingLabel + " " + Static.ReportBadSeason);
           } 
         }
 

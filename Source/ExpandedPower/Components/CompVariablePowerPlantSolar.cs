@@ -8,12 +8,7 @@ namespace ExpandedPower {
   /// Allows changing power variables in XML
   /// <para>Also uses CompSunlight for added realism</para>
   /// </summary>
-  [StaticConstructorOnStartup]
   public class CompVariablePowerPlantSolar : CompPowerPlant {
-
-    private static readonly Vector2 S_BarSize = new Vector2(2.3f, 0.14f);
-    private static readonly Material S_PowerPlantSolarBarFilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.5f, 0.475f, 0.1f));
-    private static readonly Material S_PowerPlantSolarBarUnfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.15f, 0.15f, 0.15f));
 
     CompSunlight sunlightComp;
 
@@ -70,10 +65,10 @@ namespace ExpandedPower {
       base.PostDraw();
       GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
       r.center = parent.DrawPos + Vector3.up * 0.1f;
-      r.size = S_BarSize;
+      r.size = Static.PowerPlantSolarBarSize;
       r.fillPercent = PowerOutput / Props.fullSunPower;
-      r.filledMat = S_PowerPlantSolarBarFilledMat;
-      r.unfilledMat = S_PowerPlantSolarBarUnfilledMat;
+      r.filledMat = Static.PowerPlantSolarBarFilledMat;
+      r.unfilledMat = Static.PowerPlantSolarBarUnfilledMat;
       r.margin = 0.15f;
       Rot4 rotation = parent.Rotation;
       rotation.Rotate(RotationDirection.Clockwise);
@@ -90,16 +85,16 @@ namespace ExpandedPower {
 
       // Inform the player how the weather is affecting this building
       if (sunlightComp.WeatherLight == WeatherLight.Bright) {
-        stringBuilder.AppendLine("EXP_Bright".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportBright);
       }
       if (sunlightComp.WeatherLight == WeatherLight.Darkened) {
-        stringBuilder.AppendLine("EXP_Darkened".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportDarkened);
       }
       if (sunlightComp.WeatherLight == WeatherLight.Dark) {
-        stringBuilder.AppendLine("EXP_Dark".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportDark);
       }
 
-      stringBuilder.Append("EXP_SunlightLevel".Translate() + ": ");
+      stringBuilder.Append(Static.InspectSunlightLevel + ": ");
       stringBuilder.Append(Mathf.Round(sunlightComp.FactoredSunlight * 100));
       stringBuilder.AppendLine(" / 100");
 

@@ -4,18 +4,14 @@ using UnityEngine;
 using Verse;
 
 namespace ExpandedPower {
-  [StaticConstructorOnStartup]
+
   public class Building_DaylightSensor : Building {
 
     public bool InSunlight;          // Current sunlight status
     private bool inSunlightOld;      // Backup status for loading
 
     // Comps
-    private CompSunlight sunlightComp;
-
-    // Paths for graphics
-    public static readonly Graphic SensorOn = GraphicDatabase.Get<Graphic_Single>("Cupro/Object/Utility/DS/DaylightSensor_On");
-    public static readonly Graphic SensorOff = GraphicDatabase.Get<Graphic_Single>("Cupro/Object/Utility/DS/DaylightSensor_Off");
+    private CompSunlight sunlightComp;    
 
     // Used for Building_InvertedDaylightSensor, since it inherits this class
     public virtual bool Inverted {
@@ -31,9 +27,9 @@ namespace ExpandedPower {
     public override Graphic Graphic {
       get {
         if (InSunlight) {
-          return SensorOn;
+          return Static.GraphicSensorOn;
         }
-        return SensorOff;
+        return Static.GraphicSensorOff;
       }
     }
 
@@ -92,27 +88,27 @@ namespace ExpandedPower {
 
       // Inform the player how the weather is affecting this building
       if (sunlightComp.WeatherLight == WeatherLight.Bright) {
-        stringBuilder.AppendLine("EXP_Bright".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportBright);
       }
       if (sunlightComp.WeatherLight == WeatherLight.Darkened) {
-        stringBuilder.AppendLine("EXP_Darkened".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportDarkened);
       }
       if (sunlightComp.WeatherLight == WeatherLight.Dark) {
-        stringBuilder.AppendLine("EXP_Dark".Translate());
+        stringBuilder.AppendLine(Static.WeatherReportDark);
       }
 
-      stringBuilder.Append("EXP_SunlightLevel".Translate() + ": ");
+      stringBuilder.Append(Static.InspectSunlightLevel + ": ");
       // Add a helpful tracker for current sunlight levels
       stringBuilder.Append(Mathf.Round(sunlightComp.FactoredSunlight * 1000) / 10);
       stringBuilder.AppendLine(" / 100");
 
       // If this is not receiving > 30% light, and is a daylight sensor
       if (InSunlight == false && Inverted == false) {
-        stringBuilder.Append("EXP_Under30".Translate());
+        stringBuilder.Append(Static.InspectUnder30);
       }
       // If this is receiving > 30% light, but is an inverted daylight sensor
       if (InSunlight == true && Inverted == true) {
-        stringBuilder.Append("EXP_Above30".Translate());
+        stringBuilder.Append(Static.InspectAbove30);
       }
 
       return stringBuilder.ToString().TrimEndNewlines();

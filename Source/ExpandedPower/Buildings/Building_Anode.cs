@@ -54,19 +54,19 @@ namespace ExpandedPower {
     public override IEnumerable<Gizmo> GetGizmos() {
 
       Command_Action lower = new Command_Action() {
-        icon = ContentFinder<Texture2D>.Get("Cupro/UI/Commands/PowerLower", false),
-        defaultDesc = "EXP_PowerLower_D".Translate(),
-        defaultLabel = "EXP_PowerLower_L".Translate(),
-        activateSound = SoundDef.Named("Click"),
+        icon = Static.TexPowerLower,
+        defaultDesc = Static.DescriptionPowerLower,
+        defaultLabel = Static.LabelPowerLower,
+        activateSound = SoundDefOf.Click,
         action = () => { CurrentEnergyToSend -= 50f; },
       };
       yield return lower;
 
       Command_Action raise = new Command_Action() {
-        icon = ContentFinder<Texture2D>.Get("Cupro/UI/Commands/PowerRaise", false),
-        defaultDesc = "EXP_PowerRaise_D".Translate(),
-        defaultLabel = "EXP_PowerRaise_L".Translate(),
-        activateSound = SoundDef.Named("Click"),
+        icon = Static.TexPowerRaise,
+        defaultDesc = Static.DescriptionPowerRaise,
+        defaultLabel = Static.LabelPowerRaise,
+        activateSound = SoundDefOf.Click,
         action = () => { CurrentEnergyToSend += 50f; },
       };
       yield return raise;
@@ -146,7 +146,7 @@ namespace ExpandedPower {
       StringBuilder stringBuilder = new StringBuilder();
       // Inform the player how much energy is being sent
       // This is to show power usage while paused
-      stringBuilder.AppendLine("EXP_PowerUsage".Translate( new object[] {currentEnergyToSend} ));
+      stringBuilder.AppendLine("EXP_PowerUsage".Translate(currentEnergyToSend));
 
       // Get inherited string data
       stringBuilder.Append(base.GetInspectString());

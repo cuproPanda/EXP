@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace ExpandedPower {
@@ -14,14 +13,14 @@ namespace ExpandedPower {
 
 
     public Designator_PlantsHarvestSecondary() {
-      defaultLabel = "EXP_DesignatorHarvestSecondary".Translate();
-      defaultDesc = "EXP_DesignatorHarvestSecondaryDesc".Translate();
-      icon = ContentFinder<Texture2D>.Get("Cupro/UI/Designations/HarvestSecondary");
+      defaultLabel = Static.LabelHarvestSecondary;
+      defaultDesc = Static.DescriptionHarvestSecondary;
+      icon = Static.texHarvestSecondary;
       soundDragSustain = SoundDefOf.DesignateDragStandard;
       soundDragChanged = SoundDefOf.DesignateDragStandardChanged;
       useMouseIcon = true;
       soundSucceeded = SoundDefOf.DesignateHarvest;
-      designationDef = DefDatabase<DesignationDef>.GetNamed("EXP_Designator_PlantsHarvestSecondary");
+      designationDef = Static.DesignationHarvestSecondary;
     }
     
 
@@ -32,7 +31,7 @@ namespace ExpandedPower {
       }
       // If the thing doesn't have a matching PlantWithSecondaryDef
       if (DefDatabase<PlantWithSecondaryDef>.GetNamed(t.def.defName, false) == null) {
-        return "EXP_MustDesignatePlantsWithSecondary".Translate();
+        return Static.ReportDesignatePlantsWithSecondary;
       }
       // If the thing is already designated
       if (Map.designationManager.DesignationOn(t, designationDef) != null) {
@@ -41,7 +40,7 @@ namespace ExpandedPower {
       // If the secondary resource isn't harvestable
       PlantWithSecondary plant = (PlantWithSecondary)t;
       if (!plant.Sec_HarvestableNow) {
-        return "EXP_MustDesignateHarvestableSecondary".Translate();
+        return Static.ReportDesignateHarvestableSecondary;
       }
       return true;
     }
@@ -53,7 +52,7 @@ namespace ExpandedPower {
       }
       Plant plant = c.GetPlant(Map);
       if (plant == null) {
-        return "EXP_MustDesignatePlantsWithSecondary".Translate();
+        return Static.ReportDesignatePlantsWithSecondary;
       }
       AcceptanceReport result = CanDesignateThing(plant);
       if (!result.Accepted) {

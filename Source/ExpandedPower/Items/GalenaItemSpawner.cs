@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace ExpandedPower {
 
@@ -8,21 +9,13 @@ namespace ExpandedPower {
       base.SpawnSetup(map, respawningAfterLoad);
 			
 			int chance = Rand.Range(0, 100);
-			
-			// Give a 5% chance to spawn cerussite, if it exists
-			if (chance < 5){
-				if (DefDatabase<ThingDef>.GetNamed("EXP_Cerussite", false) != null){
-					SpawnExactQuantity(ThingDef.Named("EXP_Cerussite"), 1);
-				}
-			}
 
       // Give a 25% chance to spawn silver
       if (chance < 25) {
-        SpawnRandomQuantity(ThingDef.Named("Silver"), 10, 15);
+        SpawnRandomQuantity(ThingDefOf.Silver, 10, 15, Position, map, ThingPlaceMode.Near, false);
       }
 
-      SpawnRandomQuantity(ThingDef.Named("EXP_Lead"), 20, 40);
-      Destroy();
+      SpawnRandomQuantity(ExpDefOf.EXP_Lead, 20, 40, Position, map, ThingPlaceMode.Direct);
     }
   }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="ExpandedPower.PatchOperationFindMod">
+				<modName>Powerless!</modName>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/RecipeDefs/RecipeDef[defName="EXP_FuseQuartz"]/recipeUsers</xpath>
+				<value>
+					<li>POW_Forge</li>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+</Patch>

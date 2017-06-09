@@ -45,13 +45,13 @@ namespace ExpandedPower {
       }
 
       foreach (Designation current in pawn.Map.designationManager.AllDesignationsOn(plant)) {
-        if (current.def == DefDatabase<DesignationDef>.GetNamed("EXP_Designator_PlantsHarvestSecondary")) {
+        if (current.def == ExpDefOf.EXP_Designator_PlantsHarvestSecondary) {
           Job result;
           if (!plant.Sec_HarvestableNow) {
             result = null;
             return result;
           }
-          result = new Job(DefDatabase<JobDef>.GetNamed("EXP_PlantsHarvestSecondary"), plant);
+          result = new Job(ExpDefOf.EXP_PlantsHarvestSecondary, plant);
           return result;
         }
       }

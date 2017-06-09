@@ -42,26 +42,26 @@ namespace ExpandedPower {
       weatherDef = parent.Map.weatherManager.curWeather;
 
       // Clear weather provides the maximum sunlight
-      if (weatherDef == WeatherDef.Named("Clear")) {
+      if (weatherDef == ExpDefOf.Clear) {
         wLight = WeatherLight.Bright;
         sunStrength = 1f;
         return;
       }
       // These weathers provide 60% sunlight
-      else if (weatherDef == WeatherDef.Named("Fog") ||
-               weatherDef == WeatherDef.Named("Rain") ||
-               weatherDef == WeatherDef.Named("SnowGentle")) {
+      else if (weatherDef == ExpDefOf.Fog ||
+               weatherDef == ExpDefOf.Rain ||
+               weatherDef == ExpDefOf.SnowGentle) {
         wLight = WeatherLight.Darkened;
         sunStrength = 0.6f;
         return;
       }
       // These weathers get only 25% sunlight
-      else if (weatherDef == WeatherDef.Named("FoggyRain") ||
-               weatherDef == WeatherDef.Named("SnowHard") ||
-               weatherDef == WeatherDef.Named("DryThunderstorm") ||
-               weatherDef == WeatherDef.Named("RainyThunderstorm")) {
+      else if (weatherDef == ExpDefOf.FoggyRain ||
+               weatherDef == ExpDefOf.SnowHard ||
+               weatherDef == ExpDefOf.DryThunderstorm ||
+               weatherDef == ExpDefOf.RainyThunderstorm) {
         wLight = WeatherLight.Dark;
-        sunStrength = 0.25f;
+        sunStrength = 0.35f;
         return;
       }
       // Default variable. Prevents issues when other mods add custom weather

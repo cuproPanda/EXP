@@ -85,6 +85,7 @@
 			<ignoreNeedsPower>true</ignoreNeedsPower>
 			<isEdifice>false</isEdifice>
 		</building>
+		<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
