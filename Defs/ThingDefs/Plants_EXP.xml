@@ -107,7 +107,7 @@
 			<harvestWork>1000</harvestWork>
 			<harvestedThingDef>EXP_RubberWood</harvestedThingDef>
 			<harvestYield>15</harvestYield>
-			<wildCommonalityMaxFraction>0.005</wildCommonalityMaxFraction>
+			<wildCommonalityMaxFraction>0.05</wildCommonalityMaxFraction>
 			<blockAdjacentSow>false</blockAdjacentSow>
 			<visualSizeRange>
 				<min>0.25</min>
