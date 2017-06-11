@@ -19,6 +19,5 @@ namespace ExpandedPower {
     public static ThingDef EXP_Lead;
     public static ThingDef EXP_Rubber;
     public static ThingDef EXP_Quartz;
-    public static PlantWithSecondaryDef EXP_PlantTreeRubber;
   }
 }

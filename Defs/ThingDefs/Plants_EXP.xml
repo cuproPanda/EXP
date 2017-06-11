@@ -88,7 +88,8 @@
 	</ThingDef>
 
 
-	<ThingDef Name="EXP_PlantDefInsertion" ParentName="TreeBase">
+
+	<ThingDef ParentName="TreeBase">
 		<defName>EXP_PlantTreeRubber</defName>
 		<thingClass>RimWorld.PlantWithSecondary</thingClass>
 		<label>rubberwood tree</label>
@@ -131,6 +132,7 @@
 			<li>Summer</li>
 		</limitedGrowSeasons>
 		<harvestedThingDef>EXP_LatexBucket</harvestedThingDef>
+		<seedsPleaseSeedDef>EXP_SeedTreeRubber</seedsPleaseSeedDef>
 		<specialThingDefLabel>Latex</specialThingDefLabel>
 		<maxToHarvest>1</maxToHarvest>
 	</RimWorld.PlantWithSecondaryDef>

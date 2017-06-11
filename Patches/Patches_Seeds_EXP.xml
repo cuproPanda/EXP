@@ -2,6 +2,7 @@
 <Patch>
 
 	<!-- If SeedsPlease is found, add seeds -->
+
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<Operations>
@@ -9,10 +10,74 @@
 				<modName>SeedsPlease</modName>
 			</li>
 			<li Class="PatchOperationInsert">
-				<xpath>/Defs/ThingDef[@Name="EXP_PlantDefInsertion"]</xpath>
-				<Order>Prepend</Order>
+				<xpath>/RecipeDefs/RecipeDef[@Name="EXP_RecipeInsertion"]</xpath>
+				<order>Prepend</order>
 				<value>
-					<SeedsPlease.SeedDef Name="EXP_SeedBase" ParentName="ResourceBase" Abstract="True">
+					<RecipeDef Abstract="True" Name="ProcessRaw">
+						<jobString>Processing plants.</jobString>
+						<workSpeedStat>TailoringSpeed</workSpeedStat>
+						<effectWorking>Tailor</effectWorking>
+						<soundWorking>Recipe_Tailor</soundWorking>
+						<workSkill>Crafting</workSkill>
+						<workAmount>800</workAmount>
+						<recipeUsers>
+							<li>PlantProcessingTable</li>
+						</recipeUsers>
+					</RecipeDef>
+					<SeedsPlease.RecipeDef ParentName="ProcessRaw">
+						<defName>EXP_MakeRubberSeed</defName>
+						<label>make rubber plant seeds</label>
+						<description>Make seeds from raw rubber.</description>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>EXP_RawRubber</li>
+									</thingDefs>
+								</filter>
+								<count>9</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>EXP_RawRubber</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<EXP_SeedRubber>4</EXP_SeedRubber>
+						</products>
+					</SeedsPlease.RecipeDef>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="ExpandedPower.PatchOperationFindMod">
+				<modName>SeedsPlease</modName>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>/Defs/ThingDef[defName="EXP_PlantTreeRubber"]</xpath>
+				<value>
+					<blueprintDef>EXP_SeedTreeRubber</blueprintDef>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="ExpandedPower.PatchOperationFindMod">
+				<modName>SeedsPlease</modName>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>/Resources/ThingDef[@Name="EXP_ThingInsertion"]</xpath>
+				<order>Prepend</order>
+				<value>
+					<SeedsPlease.SeedDef Name="SeedBase" ParentName="ResourceBase" Abstract="True">
 						<thingClass>SeedsPlease.Seed</thingClass>
 						<label>unspecified seed</label>
 						<description>These are genetically engineered seeds capable of thriving in a wide range of alien environments over multiple generations.</description>
@@ -45,16 +110,17 @@
 						<stackLimit>500</stackLimit>
 					</SeedsPlease.SeedDef>
 
-					<SeedsPlease.SeedDef ParentName="EXP_SeedBase">
+					<SeedsPlease.SeedDef ParentName="SeedBase">
 						<defName>EXP_SeedTreeRubber</defName>
-						<label>rubber tree seeds</label>
+						<label>rubber tree saplings</label>
+						<description>These are genetically engineered saplings capable of thriving in a wide range of alien environments over multiple generations.</description>
 						<plant>EXP_PlantTreeRubber</plant>
 						<statBases>
 							<MarketValue>10.6</MarketValue>
 						</statBases>
 					</SeedsPlease.SeedDef>
 
-					<SeedsPlease.SeedDef ParentName="EXP_SeedBase">
+					<SeedsPlease.SeedDef ParentName="SeedBase">
 						<defName>EXP_SeedRubber</defName>
 						<label>rubber plant seeds</label>
 						<plant>EXP_PlantRubber</plant>

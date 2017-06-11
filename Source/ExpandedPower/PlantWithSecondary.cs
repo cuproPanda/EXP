@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 using ExpandedPower;
 using UnityEngine;
@@ -9,6 +10,9 @@ using Verse;
 namespace RimWorld {
   [StaticConstructorOnStartup]
   public class PlantWithSecondary : Plant {
+
+    // If there is currently a seed for SeedsPlease, and the mod is installed, list it.
+    public ThingDef seedsPleaseSeedDef = null;
 
     // Def reference for the secondary thing
     private PlantWithSecondaryDef secondaryDef;
@@ -125,6 +129,13 @@ namespace RimWorld {
       }
 
       secondaryDef = DefDatabase<PlantWithSecondaryDef>.GetNamed(def.defName);
+
+      // If a SeedsPlease seed exists, and SeedsPlease is installed, assign it
+      string seed = secondaryDef.seedsPleaseSeedDef;
+      if (!seed.NullOrEmpty() && DefDatabase<ThingDef>.GetNamed(seed, false) != null && ModsConfig.ActiveModsInLoadOrder.Any(m => m.Name == "SeedsPlease")) {
+        seedsPleaseSeedDef = DefDatabase<ThingDef>.GetNamed(seed);
+      }
+
       harvestDesignation = Static.DesignationHarvestSecondary;
 
       // Allow the secondary thing to start grown similar to the parent plant

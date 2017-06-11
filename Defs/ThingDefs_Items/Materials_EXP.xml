@@ -37,7 +37,7 @@
 	<!-- ========================== Inheritors ============================== -->
 
 
-	<ThingDef ParentName="ResourceBase">
+	<ThingDef Name="EXP_ThingInsertion" ParentName="ResourceBase">
 		<defName>EXP_InsulatedCable</defName>
 		<label>insulated cable</label>
 		<description>A copper cable with rubber insulation.</description>

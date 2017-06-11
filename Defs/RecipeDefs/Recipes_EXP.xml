@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
-
-
-	<RecipeDef>
+	
+	<RecipeDef Name="EXP_RecipeInsertion">
 		<defName>EXP_InsulateCable</defName>
 		<label>make insulated cable</label>
 		<description>Shape copper into a cable and insulate it using lead and rubber.</description>

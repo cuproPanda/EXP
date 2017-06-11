@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using RimWorld;
 using Verse;
@@ -51,6 +52,20 @@ namespace ExpandedPower {
         pawn.Map.designationManager.RemoveAllDesignationsOn(Plant);
 
         GenPlace.TryPlaceThing(resource, pawn.Position, Map, ThingPlaceMode.Near);
+
+        // If there is a SeedsPlease seed, try to drop it
+        if (Plant.seedsPleaseSeedDef != null) {
+          int stack = Rand.RangeInclusive(-1, 1);
+          if (pawn.skills != null) {
+            stack += (int)Math.Round(pawn.skills.GetSkill(SkillDefOf.Growing).Level / 8d, MidpointRounding.AwayFromZero);
+          }
+          if (stack > 0) {
+            Thing seed = ThingMaker.MakeThing(Plant.seedsPleaseSeedDef);
+            seed.stackCount = stack;
+            GenPlace.TryPlaceThing(seed, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+          }
+        }
+
         StoragePriority storagePriority = HaulAIUtility.StoragePriorityAtFor(resource.Position, resource);
 
         // Gain experience from gathering this resource (done after completion to prevent drafting exploit)
