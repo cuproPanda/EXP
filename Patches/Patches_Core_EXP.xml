@@ -279,28 +279,6 @@
 
 
 
-	<!-- ==================== Buildings_Natural ==================== -->
-
-
-
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/ThingDefs/ThingDef[defName="MineableComponents"]/building/mineableThing</xpath>
-		<value>
-			<mineableThing>EXP_MachinerySpawner</mineableThing>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/ThingDefs/ThingDef[defName="MineableComponents"]/building/mineableYield</xpath>
-		<value>
-			<mineableYield>1</mineableYield>
-		</value>
-	</Operation>
-
-
-
-
 	<!-- ==================== Buildings_Power ==================== -->
 
 

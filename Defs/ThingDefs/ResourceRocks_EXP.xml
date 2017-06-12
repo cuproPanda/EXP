@@ -64,8 +64,8 @@
 		</statBases>
 		<building>
 			<isResourceRock>true</isResourceRock>
-			<mineableThing>EXP_QuartzSpawner</mineableThing>
-			<mineableYield>1</mineableYield>
+			<mineableThing>EXP_Quartz</mineableThing>
+			<mineableYield>20</mineableYield>
 			<mineableScatterCommonality>0.75</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>7</min>
@@ -92,8 +92,8 @@
 		</statBases>
 		<building>
 			<isResourceRock>true</isResourceRock>
-			<mineableThing>EXP_QuartzSpawner</mineableThing>
-			<mineableYield>1</mineableYield>
+			<mineableThing>EXP_Quartz</mineableThing>
+			<mineableYield>5</mineableYield>
 			<!-- This should be phased out in A18 -->
 			<mineableScatterCommonality>0.1</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
@@ -120,8 +120,8 @@
 		</statBases>
 		<building>
 			<isResourceRock>true</isResourceRock>
-			<mineableThing>EXP_CopperSpawner</mineableThing>
-			<mineableYield>1</mineableYield>
+			<mineableThing>EXP_Copper</mineableThing>
+			<mineableYield>35</mineableYield>
 			<mineableScatterCommonality>0.9</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>
 				<min>8</min>
@@ -145,6 +145,8 @@
 			<Beauty>2</Beauty>
 			<MaxHitPoints>1800</MaxHitPoints>
 		</statBases>
+		<blueprintDef>EXP_Lead</blueprintDef>
+		<hideAtSnowDepth>30</hideAtSnowDepth>
 		<building>
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>EXP_GalenaSpawner</mineableThing>
