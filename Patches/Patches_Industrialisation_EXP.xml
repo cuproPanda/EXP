@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- If Industrialisation is installed, add copper unification recipes -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="ExpandedPower.PatchOperationFindMod">
+				<modName>Industrialisation</modName>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>/RecipeDefs/RecipeDef[@Name="EXP_RecipeInsertion"]</xpath>
+				<order>Prepend</order>
+				<value>
+					<RecipeDef>
+						<defName>EXP_ConvertCopper_FromIND</defName>
+						<label>exchange Industrialisation copper</label>
+						<description>Exchange Industrialisation's copper with Expanded Power's copper.</description>
+						<jobString>Exchanging copper.</jobString>
+						<workAmount>5</workAmount>
+						<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+						<workSkill>Crafting</workSkill>
+						<effectWorking>Cook</effectWorking>
+						<soundWorking>Recipe_Machining</soundWorking>
+						<targetCountAdjustment>5</targetCountAdjustment>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Ind_Copper</li>
+									</thingDefs>
+								</filter>
+								<count>5</count>
+							</li>
+						</ingredients>
+						<products>
+							<EXP_Copper>5</EXP_Copper>
+						</products>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Ind_Copper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>Ind_Copper</li>
+							</thingDefs>
+						</defaultIngredientFilter>
+						<recipeUsers>
+							<li>CraftingSpot</li>
+						</recipeUsers>
+					</RecipeDef>
+
+					<RecipeDef>
+						<defName>EXP_ConvertCopper_FromEXP</defName>
+						<label>exchange Expanded Power copper</label>
+						<description>Exchange Expanded Power's copper with Industrialisation's copper.</description>
+						<jobString>Exchanging copper.</jobString>
+						<workAmount>5</workAmount>
+						<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+						<workSkill>Crafting</workSkill>
+						<effectWorking>Cook</effectWorking>
+						<soundWorking>Recipe_Machining</soundWorking>
+						<targetCountAdjustment>5</targetCountAdjustment>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>EXP_Copper</li>
+									</thingDefs>
+								</filter>
+								<count>5</count>
+							</li>
+						</ingredients>
+						<products>
+							<Ind_Copper>5</Ind_Copper>
+						</products>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>EXP_Copper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>EXP_Copper</li>
+							</thingDefs>
+						</defaultIngredientFilter>
+						<recipeUsers>
+							<li>CraftingSpot</li>
+						</recipeUsers>
+					</RecipeDef>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+</Patch>
