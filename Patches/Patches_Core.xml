@@ -400,56 +400,56 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[DefName="ElectricTailoringBench"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<Steel>20</Steel>
 				<EXP_Copper>30</EXP_Copper>
 				<Component>3</Component>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[DefName="ElectricSmithy"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<Steel>60</Steel>
 				<EXP_Copper>40</EXP_Copper>
 				<Component>4</Component>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[DefName="TableMachining"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<Steel>100</Steel>
 				<EXP_Copper>40</EXP_Copper>
 				<EXP_InsulatedCable>10</EXP_InsulatedCable>
 				<Component>5</Component>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[defName="ElectricStove"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<Steel>50</Steel>
 				<EXP_Copper>30</EXP_Copper>
 				<Component>2</Component>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[DefName="Brewery"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<WoodLog>120</WoodLog>
 				<EXP_Copper>20</EXP_Copper>
 				<EXP_Rubber>20</EXP_Rubber>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
@@ -467,12 +467,12 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/ThingDefs/ThingDef[DefName="ElectricSmelter"]/CostList</xpath>
 		<value>
-			<costList>
+			<CostList>
 				<Steel>120</Steel>
 				<EXP_Copper>40</EXP_Copper>
 				<EXP_InsulatedCable>10</EXP_InsulatedCable>
 				<Component>2</Component>
-			</costList>
+			</CostList>
 		</value>
 	</Operation>
 
